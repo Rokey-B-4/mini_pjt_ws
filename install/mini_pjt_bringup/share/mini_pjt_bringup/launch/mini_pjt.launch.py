@@ -1,1 +1,0 @@
-/home/rokey/mini_pjt_ws/build/mini_pjt_bringup/launch/mini_pjt.launch.py

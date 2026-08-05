@@ -1,1 +1,0 @@
-/home/rokey/mini_pjt_ws/build/mini_pjt_interfaces/rosidl_cmake/rosidl_cmake_aggregate_target-extras.cmake

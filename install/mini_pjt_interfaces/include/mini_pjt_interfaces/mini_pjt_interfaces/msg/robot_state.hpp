@@ -1,1 +1,0 @@
-/home/rokey/mini_pjt_ws/build/mini_pjt_interfaces/rosidl_generator_cpp/mini_pjt_interfaces/msg/robot_state.hpp

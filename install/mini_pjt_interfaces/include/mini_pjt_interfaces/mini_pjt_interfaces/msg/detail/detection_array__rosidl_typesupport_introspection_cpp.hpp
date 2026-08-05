@@ -1,1 +1,0 @@
-/home/rokey/mini_pjt_ws/build/mini_pjt_interfaces/rosidl_typesupport_introspection_cpp/mini_pjt_interfaces/msg/detail/detection_array__rosidl_typesupport_introspection_cpp.hpp

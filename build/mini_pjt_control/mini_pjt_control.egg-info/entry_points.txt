@@ -1,6 +1,0 @@
-[console_scripts]
-approach_controller = mini_pjt_control.approach_controller:main
-car_approach_node = mini_pjt_control.car_approach_node:main
-mission_manager_node = mini_pjt_control.mission_manager_node:main
-target_seeker_node = mini_pjt_control.target_seeker_node:main
-

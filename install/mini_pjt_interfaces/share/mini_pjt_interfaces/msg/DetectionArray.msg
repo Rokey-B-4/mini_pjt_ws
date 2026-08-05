@@ -1,1 +1,0 @@
-/home/rokey/mini_pjt_ws/src/mini_pjt_interfaces/msg/DetectionArray.msg
