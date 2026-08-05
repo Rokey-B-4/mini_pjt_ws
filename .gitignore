@@ -1,3 +1,12 @@
-/build
-/install
-/log
+# 빌드 및 산출물 폴더
+build/
+install/
+log/
+
+# IDE / 에디터 설정
+.vscode/
+.idea/
+
+# OS 생성 파일
+.DS_Store
+*.swp
