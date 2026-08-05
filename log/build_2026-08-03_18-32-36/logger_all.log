@@ -1,0 +1,333 @@
+[0.059s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install']
+[0.059s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=22, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7d2a73f7e3b0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7d2a73f7d930>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7d2a73f7d930>>, mixin_verb=('build',))
+[0.161s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.161s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.161s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.161s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.161s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.161s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.161s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/rokey/mini_pjt_ws'
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_pjt_bringup) by extensions ['ignore', 'ignore_ament_install']
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_pjt_bringup) by extension 'ignore'
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_pjt_bringup) by extension 'ignore_ament_install'
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_pjt_bringup) by extensions ['colcon_pkg']
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_pjt_bringup) by extension 'colcon_pkg'
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_pjt_bringup) by extensions ['colcon_meta']
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_pjt_bringup) by extension 'colcon_meta'
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_pjt_bringup) by extensions ['ros']
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_pjt_bringup) by extension 'ros'
+[0.173s] DEBUG:colcon.colcon_core.package_identification:Package 'src/mini_pjt_bringup' with type 'ros.ament_python' and name 'mini_pjt_bringup'
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_pjt_control) by extensions ['ignore', 'ignore_ament_install']
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_pjt_control) by extension 'ignore'
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_pjt_control) by extension 'ignore_ament_install'
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_pjt_control) by extensions ['colcon_pkg']
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_pjt_control) by extension 'colcon_pkg'
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_pjt_control) by extensions ['colcon_meta']
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_pjt_control) by extension 'colcon_meta'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_pjt_control) by extensions ['ros']
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_pjt_control) by extension 'ros'
+[0.174s] DEBUG:colcon.colcon_core.package_identification:Package 'src/mini_pjt_control' with type 'ros.ament_python' and name 'mini_pjt_control'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_pjt_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_pjt_interfaces) by extension 'ignore'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_pjt_interfaces) by extension 'ignore_ament_install'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_pjt_interfaces) by extensions ['colcon_pkg']
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_pjt_interfaces) by extension 'colcon_pkg'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_pjt_interfaces) by extensions ['colcon_meta']
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_pjt_interfaces) by extension 'colcon_meta'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_pjt_interfaces) by extensions ['ros']
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_pjt_interfaces) by extension 'ros'
+[0.174s] DEBUG:colcon.colcon_core.package_identification:Package 'src/mini_pjt_interfaces' with type 'ros.ament_cmake' and name 'mini_pjt_interfaces'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_pjt_vision) by extensions ['ignore', 'ignore_ament_install']
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_pjt_vision) by extension 'ignore'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_pjt_vision) by extension 'ignore_ament_install'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_pjt_vision) by extensions ['colcon_pkg']
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_pjt_vision) by extension 'colcon_pkg'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_pjt_vision) by extensions ['colcon_meta']
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_pjt_vision) by extension 'colcon_meta'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_pjt_vision) by extensions ['ros']
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_pjt_vision) by extension 'ros'
+[0.175s] DEBUG:colcon.colcon_core.package_identification:Package 'src/mini_pjt_vision' with type 'ros.ament_python' and name 'mini_pjt_vision'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(test_data) by extensions ['ignore', 'ignore_ament_install']
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(test_data) by extension 'ignore'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(test_data) by extension 'ignore_ament_install'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(test_data) by extensions ['colcon_pkg']
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(test_data) by extension 'colcon_pkg'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(test_data) by extensions ['colcon_meta']
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(test_data) by extension 'colcon_meta'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(test_data) by extensions ['ros']
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(test_data) by extension 'ros'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(test_data) by extensions ['cmake', 'python']
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(test_data) by extension 'cmake'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(test_data) by extension 'python'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(test_data) by extensions ['python_setup_py']
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(test_data) by extension 'python_setup_py'
+[0.175s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.175s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.175s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.175s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.175s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.188s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.188s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.189s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 4 installed packages in /home/rokey/mini_pjt_ws/install
+[0.190s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 5 installed packages in /home/rokey/rokey_ws/install
+[0.190s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 17 installed packages in /home/rokey/turtlebot4_ws/install
+[0.191s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 390 installed packages in /opt/ros/humble
+[0.192s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.217s] Level 5:colcon.colcon_core.verb:set package 'mini_pjt_interfaces' build argument 'cmake_args' from command line to 'None'
+[0.217s] Level 5:colcon.colcon_core.verb:set package 'mini_pjt_interfaces' build argument 'cmake_target' from command line to 'None'
+[0.217s] Level 5:colcon.colcon_core.verb:set package 'mini_pjt_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.217s] Level 5:colcon.colcon_core.verb:set package 'mini_pjt_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[0.217s] Level 5:colcon.colcon_core.verb:set package 'mini_pjt_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[0.217s] Level 5:colcon.colcon_core.verb:set package 'mini_pjt_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[0.217s] Level 5:colcon.colcon_core.verb:set package 'mini_pjt_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[0.217s] Level 5:colcon.colcon_core.verb:set package 'mini_pjt_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[0.217s] Level 5:colcon.colcon_core.verb:set package 'mini_pjt_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.217s] DEBUG:colcon.colcon_core.verb:Building package 'mini_pjt_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/rokey/mini_pjt_ws/build/mini_pjt_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/rokey/mini_pjt_ws/install/mini_pjt_interfaces', 'merge_install': False, 'path': '/home/rokey/mini_pjt_ws/src/mini_pjt_interfaces', 'symlink_install': True, 'test_result_base': None}
+[0.217s] Level 5:colcon.colcon_core.verb:set package 'mini_pjt_control' build argument 'cmake_args' from command line to 'None'
+[0.217s] Level 5:colcon.colcon_core.verb:set package 'mini_pjt_control' build argument 'cmake_target' from command line to 'None'
+[0.217s] Level 5:colcon.colcon_core.verb:set package 'mini_pjt_control' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.217s] Level 5:colcon.colcon_core.verb:set package 'mini_pjt_control' build argument 'cmake_clean_cache' from command line to 'False'
+[0.217s] Level 5:colcon.colcon_core.verb:set package 'mini_pjt_control' build argument 'cmake_clean_first' from command line to 'False'
+[0.217s] Level 5:colcon.colcon_core.verb:set package 'mini_pjt_control' build argument 'cmake_force_configure' from command line to 'False'
+[0.217s] Level 5:colcon.colcon_core.verb:set package 'mini_pjt_control' build argument 'ament_cmake_args' from command line to 'None'
+[0.217s] Level 5:colcon.colcon_core.verb:set package 'mini_pjt_control' build argument 'catkin_cmake_args' from command line to 'None'
+[0.217s] Level 5:colcon.colcon_core.verb:set package 'mini_pjt_control' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.217s] DEBUG:colcon.colcon_core.verb:Building package 'mini_pjt_control' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/rokey/mini_pjt_ws/build/mini_pjt_control', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/rokey/mini_pjt_ws/install/mini_pjt_control', 'merge_install': False, 'path': '/home/rokey/mini_pjt_ws/src/mini_pjt_control', 'symlink_install': True, 'test_result_base': None}
+[0.217s] Level 5:colcon.colcon_core.verb:set package 'mini_pjt_vision' build argument 'cmake_args' from command line to 'None'
+[0.217s] Level 5:colcon.colcon_core.verb:set package 'mini_pjt_vision' build argument 'cmake_target' from command line to 'None'
+[0.217s] Level 5:colcon.colcon_core.verb:set package 'mini_pjt_vision' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.217s] Level 5:colcon.colcon_core.verb:set package 'mini_pjt_vision' build argument 'cmake_clean_cache' from command line to 'False'
+[0.217s] Level 5:colcon.colcon_core.verb:set package 'mini_pjt_vision' build argument 'cmake_clean_first' from command line to 'False'
+[0.217s] Level 5:colcon.colcon_core.verb:set package 'mini_pjt_vision' build argument 'cmake_force_configure' from command line to 'False'
+[0.217s] Level 5:colcon.colcon_core.verb:set package 'mini_pjt_vision' build argument 'ament_cmake_args' from command line to 'None'
+[0.217s] Level 5:colcon.colcon_core.verb:set package 'mini_pjt_vision' build argument 'catkin_cmake_args' from command line to 'None'
+[0.217s] Level 5:colcon.colcon_core.verb:set package 'mini_pjt_vision' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.217s] DEBUG:colcon.colcon_core.verb:Building package 'mini_pjt_vision' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/rokey/mini_pjt_ws/build/mini_pjt_vision', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/rokey/mini_pjt_ws/install/mini_pjt_vision', 'merge_install': False, 'path': '/home/rokey/mini_pjt_ws/src/mini_pjt_vision', 'symlink_install': True, 'test_result_base': None}
+[0.218s] Level 5:colcon.colcon_core.verb:set package 'mini_pjt_bringup' build argument 'cmake_args' from command line to 'None'
+[0.218s] Level 5:colcon.colcon_core.verb:set package 'mini_pjt_bringup' build argument 'cmake_target' from command line to 'None'
+[0.218s] Level 5:colcon.colcon_core.verb:set package 'mini_pjt_bringup' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.218s] Level 5:colcon.colcon_core.verb:set package 'mini_pjt_bringup' build argument 'cmake_clean_cache' from command line to 'False'
+[0.218s] Level 5:colcon.colcon_core.verb:set package 'mini_pjt_bringup' build argument 'cmake_clean_first' from command line to 'False'
+[0.218s] Level 5:colcon.colcon_core.verb:set package 'mini_pjt_bringup' build argument 'cmake_force_configure' from command line to 'False'
+[0.218s] Level 5:colcon.colcon_core.verb:set package 'mini_pjt_bringup' build argument 'ament_cmake_args' from command line to 'None'
+[0.218s] Level 5:colcon.colcon_core.verb:set package 'mini_pjt_bringup' build argument 'catkin_cmake_args' from command line to 'None'
+[0.218s] Level 5:colcon.colcon_core.verb:set package 'mini_pjt_bringup' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.218s] DEBUG:colcon.colcon_core.verb:Building package 'mini_pjt_bringup' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/rokey/mini_pjt_ws/build/mini_pjt_bringup', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/rokey/mini_pjt_ws/install/mini_pjt_bringup', 'merge_install': False, 'path': '/home/rokey/mini_pjt_ws/src/mini_pjt_bringup', 'symlink_install': True, 'test_result_base': None}
+[0.218s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.219s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.219s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/rokey/mini_pjt_ws/src/mini_pjt_interfaces' with build type 'ament_cmake'
+[0.219s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/rokey/mini_pjt_ws/src/mini_pjt_interfaces'
+[0.220s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.221s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.221s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.227s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rokey/mini_pjt_ws/build/mini_pjt_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rokey/mini_pjt_ws/install/mini_pjt_bringup:/home/rokey/mini_pjt_ws/install/mini_pjt_vision:/home/rokey/mini_pjt_ws/install/mini_pjt_control:/home/rokey/rokey_ws/install/turtlebot4_beep:/home/rokey/rokey_ws/install/rokey_pjt:/home/rokey/rokey_ws/install/img_data_subscriber:/home/rokey/rokey_ws/install/img_data_publisher:/home/rokey/rokey_ws/install/depth_checker:/home/rokey/turtlebot4_ws/install/turtlebot4_python_tutorials:/home/rokey/turtlebot4_ws/install/turtlebot4_openai_tutorials:/opt/ros/humble /usr/bin/cmake --build /home/rokey/mini_pjt_ws/build/mini_pjt_interfaces -- -j22 -l22
+[0.458s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rokey/mini_pjt_ws/build/mini_pjt_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rokey/mini_pjt_ws/install/mini_pjt_bringup:/home/rokey/mini_pjt_ws/install/mini_pjt_vision:/home/rokey/mini_pjt_ws/install/mini_pjt_control:/home/rokey/rokey_ws/install/turtlebot4_beep:/home/rokey/rokey_ws/install/rokey_pjt:/home/rokey/rokey_ws/install/img_data_subscriber:/home/rokey/rokey_ws/install/img_data_publisher:/home/rokey/rokey_ws/install/depth_checker:/home/rokey/turtlebot4_ws/install/turtlebot4_python_tutorials:/home/rokey/turtlebot4_ws/install/turtlebot4_openai_tutorials:/opt/ros/humble /usr/bin/cmake --build /home/rokey/mini_pjt_ws/build/mini_pjt_interfaces -- -j22 -l22
+[0.465s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rokey/mini_pjt_ws/build/mini_pjt_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rokey/mini_pjt_ws/install/mini_pjt_bringup:/home/rokey/mini_pjt_ws/install/mini_pjt_vision:/home/rokey/mini_pjt_ws/install/mini_pjt_control:/home/rokey/rokey_ws/install/turtlebot4_beep:/home/rokey/rokey_ws/install/rokey_pjt:/home/rokey/rokey_ws/install/img_data_subscriber:/home/rokey/rokey_ws/install/img_data_publisher:/home/rokey/rokey_ws/install/depth_checker:/home/rokey/turtlebot4_ws/install/turtlebot4_python_tutorials:/home/rokey/turtlebot4_ws/install/turtlebot4_openai_tutorials:/opt/ros/humble /usr/bin/cmake --install /home/rokey/mini_pjt_ws/build/mini_pjt_interfaces
+[0.510s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(mini_pjt_interfaces)
+[0.510s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rokey/mini_pjt_ws/build/mini_pjt_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rokey/mini_pjt_ws/install/mini_pjt_bringup:/home/rokey/mini_pjt_ws/install/mini_pjt_vision:/home/rokey/mini_pjt_ws/install/mini_pjt_control:/home/rokey/rokey_ws/install/turtlebot4_beep:/home/rokey/rokey_ws/install/rokey_pjt:/home/rokey/rokey_ws/install/img_data_subscriber:/home/rokey/rokey_ws/install/img_data_publisher:/home/rokey/rokey_ws/install/depth_checker:/home/rokey/turtlebot4_ws/install/turtlebot4_python_tutorials:/home/rokey/turtlebot4_ws/install/turtlebot4_openai_tutorials:/opt/ros/humble /usr/bin/cmake --install /home/rokey/mini_pjt_ws/build/mini_pjt_interfaces
+[0.512s] Level 1:colcon.colcon_core.environment:checking '/home/rokey/mini_pjt_ws/install/mini_pjt_interfaces' for CMake module files
+[0.512s] Level 1:colcon.colcon_core.environment:checking '/home/rokey/mini_pjt_ws/install/mini_pjt_interfaces' for CMake config files
+[0.513s] Level 1:colcon.colcon_core.shell:create_environment_hook('mini_pjt_interfaces', 'cmake_prefix_path')
+[0.513s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/share/mini_pjt_interfaces/hook/cmake_prefix_path.ps1'
+[0.513s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/share/mini_pjt_interfaces/hook/cmake_prefix_path.dsv'
+[0.513s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/share/mini_pjt_interfaces/hook/cmake_prefix_path.sh'
+[0.514s] Level 1:colcon.colcon_core.environment:checking '/home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/lib'
+[0.514s] Level 1:colcon.colcon_core.shell:create_environment_hook('mini_pjt_interfaces', 'ld_library_path_lib')
+[0.514s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/share/mini_pjt_interfaces/hook/ld_library_path_lib.ps1'
+[0.514s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/share/mini_pjt_interfaces/hook/ld_library_path_lib.dsv'
+[0.514s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/share/mini_pjt_interfaces/hook/ld_library_path_lib.sh'
+[0.514s] Level 1:colcon.colcon_core.environment:checking '/home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/bin'
+[0.514s] Level 1:colcon.colcon_core.environment:checking '/home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/lib/pkgconfig/mini_pjt_interfaces.pc'
+[0.515s] Level 1:colcon.colcon_core.environment:checking '/home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/lib/python3.10/site-packages'
+[0.515s] Level 1:colcon.colcon_core.environment:checking '/home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/bin'
+[0.515s] INFO:colcon.colcon_core.shell:Creating package script '/home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/share/mini_pjt_interfaces/package.ps1'
+[0.515s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/share/mini_pjt_interfaces/package.dsv'
+[0.516s] INFO:colcon.colcon_core.shell:Creating package script '/home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/share/mini_pjt_interfaces/package.sh'
+[0.516s] INFO:colcon.colcon_core.shell:Creating package script '/home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/share/mini_pjt_interfaces/package.bash'
+[0.517s] INFO:colcon.colcon_core.shell:Creating package script '/home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/share/mini_pjt_interfaces/package.zsh'
+[0.517s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/share/colcon-core/packages/mini_pjt_interfaces)
+[0.517s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(mini_pjt_interfaces)
+[0.517s] Level 1:colcon.colcon_core.environment:checking '/home/rokey/mini_pjt_ws/install/mini_pjt_interfaces' for CMake module files
+[0.518s] Level 1:colcon.colcon_core.environment:checking '/home/rokey/mini_pjt_ws/install/mini_pjt_interfaces' for CMake config files
+[0.518s] Level 1:colcon.colcon_core.shell:create_environment_hook('mini_pjt_interfaces', 'cmake_prefix_path')
+[0.518s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/share/mini_pjt_interfaces/hook/cmake_prefix_path.ps1'
+[0.518s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/share/mini_pjt_interfaces/hook/cmake_prefix_path.dsv'
+[0.518s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/share/mini_pjt_interfaces/hook/cmake_prefix_path.sh'
+[0.519s] Level 1:colcon.colcon_core.environment:checking '/home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/lib'
+[0.519s] Level 1:colcon.colcon_core.shell:create_environment_hook('mini_pjt_interfaces', 'ld_library_path_lib')
+[0.519s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/share/mini_pjt_interfaces/hook/ld_library_path_lib.ps1'
+[0.519s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/share/mini_pjt_interfaces/hook/ld_library_path_lib.dsv'
+[0.520s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/share/mini_pjt_interfaces/hook/ld_library_path_lib.sh'
+[0.520s] Level 1:colcon.colcon_core.environment:checking '/home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/bin'
+[0.520s] Level 1:colcon.colcon_core.environment:checking '/home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/lib/pkgconfig/mini_pjt_interfaces.pc'
+[0.520s] Level 1:colcon.colcon_core.environment:checking '/home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/lib/python3.10/site-packages'
+[0.520s] Level 1:colcon.colcon_core.environment:checking '/home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/bin'
+[0.520s] INFO:colcon.colcon_core.shell:Creating package script '/home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/share/mini_pjt_interfaces/package.ps1'
+[0.521s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/share/mini_pjt_interfaces/package.dsv'
+[0.521s] INFO:colcon.colcon_core.shell:Creating package script '/home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/share/mini_pjt_interfaces/package.sh'
+[0.521s] INFO:colcon.colcon_core.shell:Creating package script '/home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/share/mini_pjt_interfaces/package.bash'
+[0.521s] INFO:colcon.colcon_core.shell:Creating package script '/home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/share/mini_pjt_interfaces/package.zsh'
+[0.521s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/share/colcon-core/packages/mini_pjt_interfaces)
+[0.522s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/rokey/mini_pjt_ws/src/mini_pjt_control' with build type 'ament_python'
+[0.522s] Level 1:colcon.colcon_core.shell:create_environment_hook('mini_pjt_control', 'ament_prefix_path')
+[0.522s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rokey/mini_pjt_ws/install/mini_pjt_control/share/mini_pjt_control/hook/ament_prefix_path.ps1'
+[0.522s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rokey/mini_pjt_ws/install/mini_pjt_control/share/mini_pjt_control/hook/ament_prefix_path.dsv'
+[0.522s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rokey/mini_pjt_ws/install/mini_pjt_control/share/mini_pjt_control/hook/ament_prefix_path.sh'
+[0.523s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.523s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.525s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/rokey/mini_pjt_ws/src/mini_pjt_vision' with build type 'ament_python'
+[0.526s] Level 1:colcon.colcon_core.shell:create_environment_hook('mini_pjt_vision', 'ament_prefix_path')
+[0.526s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rokey/mini_pjt_ws/install/mini_pjt_vision/share/mini_pjt_vision/hook/ament_prefix_path.ps1'
+[0.526s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rokey/mini_pjt_ws/install/mini_pjt_vision/share/mini_pjt_vision/hook/ament_prefix_path.dsv'
+[0.526s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rokey/mini_pjt_ws/install/mini_pjt_vision/share/mini_pjt_vision/hook/ament_prefix_path.sh'
+[0.527s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.527s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.684s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/rokey/mini_pjt_ws/src/mini_pjt_control'
+[0.684s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.684s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.838s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/rokey/mini_pjt_ws/src/mini_pjt_vision'
+[0.838s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.838s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.062s] DEBUG:colcon.colcon_core.task.python.build:Available setuptools commands: sdist, bdist_dumb, install_egg_info, develop, upload_docs, easy_install, bdist_rpm, build_scripts, install_headers, init_catalog, install_scripts, bdist, rotate, install_lib, build_clib, extract_messages, register, bdist_egg, clean, alias, upload, check, setopt, install, egg_info, update_catalog, bdist_wheel, test, compile_catalog, symlink_data, saveopts, build_ext, dist_info, build, build_py, install_data
+[1.064s] DEBUG:colcon.colcon_core.task.python.build:Available setuptools commands: sdist, bdist_dumb, install_egg_info, develop, upload_docs, easy_install, bdist_rpm, build_scripts, install_headers, init_catalog, install_scripts, bdist, rotate, install_lib, build_clib, extract_messages, register, bdist_egg, clean, alias, upload, check, setopt, install, egg_info, update_catalog, bdist_wheel, test, compile_catalog, symlink_data, saveopts, build_ext, dist_info, build, build_py, install_data
+[1.231s] DEBUG:colcon.colcon_core.task.python.build:Available setuptools 'develop' options: --dry-run, --index-url, --local-snapshots-ok, --site-dirs, --no-deps, --editable, --multi-version, --install-dir, --exclude-scripts, --user, --zip-ok, --egg-path, --help, --verbose, --allow-hosts, --optimize, --always-unzip, --always-copy, --find-links, --script-dir, --quiet, --prefix, --no-user-cfg, --version, --upgrade, --record, --build-directory, --no-find-links, --uninstall
+[1.233s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rokey/mini_pjt_ws/build/mini_pjt_control': PYTHONPATH=/home/rokey/mini_pjt_ws/build/mini_pjt_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rokey/mini_pjt_ws/install/mini_pjt_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/rokey/mini_pjt_ws/build/mini_pjt_control/build --no-deps symlink_data
+[1.235s] DEBUG:colcon.colcon_core.task.python.build:Available setuptools 'develop' options: --dry-run, --index-url, --local-snapshots-ok, --site-dirs, --no-deps, --editable, --multi-version, --install-dir, --exclude-scripts, --user, --zip-ok, --egg-path, --help, --verbose, --allow-hosts, --optimize, --always-unzip, --always-copy, --find-links, --script-dir, --quiet, --prefix, --no-user-cfg, --version, --upgrade, --record, --build-directory, --no-find-links, --uninstall
+[1.237s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rokey/mini_pjt_ws/build/mini_pjt_vision': PYTHONPATH=/home/rokey/mini_pjt_ws/build/mini_pjt_vision/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rokey/mini_pjt_ws/install/mini_pjt_vision/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/rokey/mini_pjt_ws/build/mini_pjt_vision/build --no-deps symlink_data
+[1.512s] Level 1:colcon.colcon_core.shell:create_environment_hook('mini_pjt_vision', 'pythonpath_develop')
+[1.513s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rokey/mini_pjt_ws/build/mini_pjt_vision/share/mini_pjt_vision/hook/pythonpath_develop.ps1'
+[1.514s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rokey/mini_pjt_ws/build/mini_pjt_vision/share/mini_pjt_vision/hook/pythonpath_develop.dsv'
+[1.514s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rokey/mini_pjt_ws/build/mini_pjt_vision/share/mini_pjt_vision/hook/pythonpath_develop.sh'
+[1.514s] Level 1:colcon.colcon_core.environment:checking '/home/rokey/mini_pjt_ws/install/mini_pjt_vision' for CMake module files
+[1.515s] Level 1:colcon.colcon_core.environment:checking '/home/rokey/mini_pjt_ws/install/mini_pjt_vision' for CMake config files
+[1.515s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rokey/mini_pjt_ws/build/mini_pjt_vision' returned '0': PYTHONPATH=/home/rokey/mini_pjt_ws/build/mini_pjt_vision/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rokey/mini_pjt_ws/install/mini_pjt_vision/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/rokey/mini_pjt_ws/build/mini_pjt_vision/build --no-deps symlink_data
+[1.515s] Level 1:colcon.colcon_core.environment:checking '/home/rokey/mini_pjt_ws/install/mini_pjt_vision/lib'
+[1.515s] Level 1:colcon.colcon_core.environment:checking '/home/rokey/mini_pjt_ws/install/mini_pjt_vision/bin'
+[1.515s] Level 1:colcon.colcon_core.environment:checking '/home/rokey/mini_pjt_ws/install/mini_pjt_vision/lib/pkgconfig/mini_pjt_vision.pc'
+[1.515s] Level 1:colcon.colcon_core.environment:checking '/home/rokey/mini_pjt_ws/install/mini_pjt_vision/lib/python3.10/site-packages'
+[1.515s] Level 1:colcon.colcon_core.shell:create_environment_hook('mini_pjt_vision', 'pythonpath')
+[1.515s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rokey/mini_pjt_ws/install/mini_pjt_vision/share/mini_pjt_vision/hook/pythonpath.ps1'
+[1.516s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rokey/mini_pjt_ws/install/mini_pjt_vision/share/mini_pjt_vision/hook/pythonpath.dsv'
+[1.516s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rokey/mini_pjt_ws/install/mini_pjt_vision/share/mini_pjt_vision/hook/pythonpath.sh'
+[1.516s] Level 1:colcon.colcon_core.environment:checking '/home/rokey/mini_pjt_ws/install/mini_pjt_vision/bin'
+[1.516s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(mini_pjt_vision)
+[1.516s] INFO:colcon.colcon_core.shell:Creating package script '/home/rokey/mini_pjt_ws/install/mini_pjt_vision/share/mini_pjt_vision/package.ps1'
+[1.517s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rokey/mini_pjt_ws/install/mini_pjt_vision/share/mini_pjt_vision/package.dsv'
+[1.517s] INFO:colcon.colcon_core.shell:Creating package script '/home/rokey/mini_pjt_ws/install/mini_pjt_vision/share/mini_pjt_vision/package.sh'
+[1.517s] INFO:colcon.colcon_core.shell:Creating package script '/home/rokey/mini_pjt_ws/install/mini_pjt_vision/share/mini_pjt_vision/package.bash'
+[1.517s] INFO:colcon.colcon_core.shell:Creating package script '/home/rokey/mini_pjt_ws/install/mini_pjt_vision/share/mini_pjt_vision/package.zsh'
+[1.517s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rokey/mini_pjt_ws/install/mini_pjt_vision/share/colcon-core/packages/mini_pjt_vision)
+[1.518s] Level 1:colcon.colcon_core.shell:create_environment_hook('mini_pjt_control', 'pythonpath_develop')
+[1.518s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rokey/mini_pjt_ws/build/mini_pjt_control/share/mini_pjt_control/hook/pythonpath_develop.ps1'
+[1.518s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rokey/mini_pjt_ws/build/mini_pjt_control/share/mini_pjt_control/hook/pythonpath_develop.dsv'
+[1.518s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rokey/mini_pjt_ws/build/mini_pjt_control' returned '0': PYTHONPATH=/home/rokey/mini_pjt_ws/build/mini_pjt_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rokey/mini_pjt_ws/install/mini_pjt_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/rokey/mini_pjt_ws/build/mini_pjt_control/build --no-deps symlink_data
+[1.519s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rokey/mini_pjt_ws/build/mini_pjt_control/share/mini_pjt_control/hook/pythonpath_develop.sh'
+[1.519s] Level 1:colcon.colcon_core.environment:checking '/home/rokey/mini_pjt_ws/install/mini_pjt_control' for CMake module files
+[1.519s] Level 1:colcon.colcon_core.environment:checking '/home/rokey/mini_pjt_ws/install/mini_pjt_control' for CMake config files
+[1.519s] Level 1:colcon.colcon_core.environment:checking '/home/rokey/mini_pjt_ws/install/mini_pjt_control/lib'
+[1.519s] Level 1:colcon.colcon_core.environment:checking '/home/rokey/mini_pjt_ws/install/mini_pjt_control/bin'
+[1.519s] Level 1:colcon.colcon_core.environment:checking '/home/rokey/mini_pjt_ws/install/mini_pjt_control/lib/pkgconfig/mini_pjt_control.pc'
+[1.519s] Level 1:colcon.colcon_core.environment:checking '/home/rokey/mini_pjt_ws/install/mini_pjt_control/lib/python3.10/site-packages'
+[1.519s] Level 1:colcon.colcon_core.shell:create_environment_hook('mini_pjt_control', 'pythonpath')
+[1.520s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rokey/mini_pjt_ws/install/mini_pjt_control/share/mini_pjt_control/hook/pythonpath.ps1'
+[1.520s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rokey/mini_pjt_ws/install/mini_pjt_control/share/mini_pjt_control/hook/pythonpath.dsv'
+[1.520s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rokey/mini_pjt_ws/install/mini_pjt_control/share/mini_pjt_control/hook/pythonpath.sh'
+[1.520s] Level 1:colcon.colcon_core.environment:checking '/home/rokey/mini_pjt_ws/install/mini_pjt_control/bin'
+[1.520s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(mini_pjt_control)
+[1.520s] INFO:colcon.colcon_core.shell:Creating package script '/home/rokey/mini_pjt_ws/install/mini_pjt_control/share/mini_pjt_control/package.ps1'
+[1.521s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rokey/mini_pjt_ws/install/mini_pjt_control/share/mini_pjt_control/package.dsv'
+[1.521s] INFO:colcon.colcon_core.shell:Creating package script '/home/rokey/mini_pjt_ws/install/mini_pjt_control/share/mini_pjt_control/package.sh'
+[1.521s] INFO:colcon.colcon_core.shell:Creating package script '/home/rokey/mini_pjt_ws/install/mini_pjt_control/share/mini_pjt_control/package.bash'
+[1.521s] INFO:colcon.colcon_core.shell:Creating package script '/home/rokey/mini_pjt_ws/install/mini_pjt_control/share/mini_pjt_control/package.zsh'
+[1.522s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rokey/mini_pjt_ws/install/mini_pjt_control/share/colcon-core/packages/mini_pjt_control)
+[1.522s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/rokey/mini_pjt_ws/src/mini_pjt_bringup' with build type 'ament_python'
+[1.522s] Level 1:colcon.colcon_core.shell:create_environment_hook('mini_pjt_bringup', 'ament_prefix_path')
+[1.522s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rokey/mini_pjt_ws/install/mini_pjt_bringup/share/mini_pjt_bringup/hook/ament_prefix_path.ps1'
+[1.522s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rokey/mini_pjt_ws/install/mini_pjt_bringup/share/mini_pjt_bringup/hook/ament_prefix_path.dsv'
+[1.522s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rokey/mini_pjt_ws/install/mini_pjt_bringup/share/mini_pjt_bringup/hook/ament_prefix_path.sh'
+[1.523s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.523s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.686s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/rokey/mini_pjt_ws/src/mini_pjt_bringup'
+[1.686s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.686s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.905s] DEBUG:colcon.colcon_core.task.python.build:Available setuptools commands: sdist, bdist_dumb, install_egg_info, develop, upload_docs, easy_install, bdist_rpm, build_scripts, install_headers, init_catalog, install_scripts, bdist, rotate, install_lib, build_clib, extract_messages, register, bdist_egg, clean, alias, upload, check, setopt, install, egg_info, update_catalog, bdist_wheel, test, compile_catalog, symlink_data, saveopts, build_ext, dist_info, build, build_py, install_data
+[2.073s] DEBUG:colcon.colcon_core.task.python.build:Available setuptools 'develop' options: --dry-run, --index-url, --local-snapshots-ok, --site-dirs, --no-deps, --editable, --multi-version, --install-dir, --exclude-scripts, --user, --zip-ok, --egg-path, --help, --verbose, --allow-hosts, --optimize, --always-unzip, --always-copy, --find-links, --script-dir, --quiet, --prefix, --no-user-cfg, --version, --upgrade, --record, --build-directory, --no-find-links, --uninstall
+[2.076s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rokey/mini_pjt_ws/build/mini_pjt_bringup': AMENT_PREFIX_PATH=/home/rokey/mini_pjt_ws/install/mini_pjt_vision:/home/rokey/mini_pjt_ws/install/mini_pjt_control:/home/rokey/mini_pjt_ws/install/mini_pjt_bringup:/home/rokey/mini_pjt_ws/install/mini_pjt_interfaces:/home/rokey/rokey_ws/install/turtlebot4_beep:/home/rokey/rokey_ws/install/rokey_pjt:/home/rokey/rokey_ws/install/img_data_subscriber:/home/rokey/rokey_ws/install/img_data_publisher:/home/rokey/rokey_ws/install/depth_checker:/home/rokey/turtlebot4_ws/install/turtlebot4_simulator:/home/rokey/turtlebot4_ws/install/turtlebot4_ignition_bringup:/home/rokey/turtlebot4_ws/install/turtlebot4_desktop:/home/rokey/turtlebot4_ws/install/turtlebot4_viz:/home/rokey/turtlebot4_ws/install/turtlebot4_tutorials:/home/rokey/turtlebot4_ws/install/turtlebot4_python_tutorials:/home/rokey/turtlebot4_ws/install/turtlebot4_openai_tutorials:/home/rokey/turtlebot4_ws/install/turtlebot4_node:/home/rokey/turtlebot4_ws/install/turtlebot4_navigation:/home/rokey/turtlebot4_ws/install/turtlebot4_ignition_toolbox:/home/rokey/turtlebot4_ws/install/turtlebot4_msgs:/home/rokey/turtlebot4_ws/install/turtlebot4_ignition_gui_plugins:/home/rokey/turtlebot4_ws/install/turtlebot4_description:/home/rokey/turtlebot4_ws/install/turtlebot4_cpp_tutorials:/home/rokey/turtlebot4_ws/install/multirobot_map_merge:/home/rokey/turtlebot4_ws/install/explore_lite:/home/rokey/turtlebot4_ws/install/explore_lite_msgs:/opt/ros/humble PYTHONPATH=/home/rokey/mini_pjt_ws/build/mini_pjt_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rokey/mini_pjt_ws/install/mini_pjt_bringup/lib/python3.10/site-packages:/home/rokey/mini_pjt_ws/build/mini_pjt_vision:/home/rokey/mini_pjt_ws/install/mini_pjt_vision/lib/python3.10/site-packages:/home/rokey/mini_pjt_ws/build/mini_pjt_control:/home/rokey/mini_pjt_ws/install/mini_pjt_control/lib/python3.10/site-packages:/home/rokey/mini_pjt_ws/build/mini_pjt_bringup:/home/rokey/mini_pjt_ws/install/mini_pjt_bringup/lib/python3.10/site-packages:/home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/local/lib/python3.10/dist-packages:/home/rokey/rokey_ws/install/turtlebot4_beep/lib/python3.10/site-packages:/home/rokey/rokey_ws/install/rokey_pjt/lib/python3.10/site-packages:/home/rokey/rokey_ws/install/img_data_subscriber/lib/python3.10/site-packages:/home/rokey/rokey_ws/install/img_data_publisher/lib/python3.10/site-packages:/home/rokey/rokey_ws/install/depth_checker/lib/python3.10/site-packages:/home/rokey/turtlebot4_ws/install/turtlebot4_python_tutorials/lib/python3.10/site-packages:/home/rokey/turtlebot4_ws/install/turtlebot4_openai_tutorials/lib/python3.10/site-packages:/home/rokey/turtlebot4_ws/install/turtlebot4_navigation/local/lib/python3.10/dist-packages:/home/rokey/turtlebot4_ws/install/turtlebot4_msgs/local/lib/python3.10/dist-packages:/home/rokey/turtlebot4_ws/install/explore_lite_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/rokey/mini_pjt_ws/build/mini_pjt_bringup/build --no-deps symlink_data
+[2.350s] Level 1:colcon.colcon_core.shell:create_environment_hook('mini_pjt_bringup', 'pythonpath_develop')
+[2.350s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rokey/mini_pjt_ws/build/mini_pjt_bringup/share/mini_pjt_bringup/hook/pythonpath_develop.ps1'
+[2.351s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rokey/mini_pjt_ws/build/mini_pjt_bringup/share/mini_pjt_bringup/hook/pythonpath_develop.dsv'
+[2.351s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rokey/mini_pjt_ws/build/mini_pjt_bringup/share/mini_pjt_bringup/hook/pythonpath_develop.sh'
+[2.352s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rokey/mini_pjt_ws/build/mini_pjt_bringup' returned '0': AMENT_PREFIX_PATH=/home/rokey/mini_pjt_ws/install/mini_pjt_vision:/home/rokey/mini_pjt_ws/install/mini_pjt_control:/home/rokey/mini_pjt_ws/install/mini_pjt_bringup:/home/rokey/mini_pjt_ws/install/mini_pjt_interfaces:/home/rokey/rokey_ws/install/turtlebot4_beep:/home/rokey/rokey_ws/install/rokey_pjt:/home/rokey/rokey_ws/install/img_data_subscriber:/home/rokey/rokey_ws/install/img_data_publisher:/home/rokey/rokey_ws/install/depth_checker:/home/rokey/turtlebot4_ws/install/turtlebot4_simulator:/home/rokey/turtlebot4_ws/install/turtlebot4_ignition_bringup:/home/rokey/turtlebot4_ws/install/turtlebot4_desktop:/home/rokey/turtlebot4_ws/install/turtlebot4_viz:/home/rokey/turtlebot4_ws/install/turtlebot4_tutorials:/home/rokey/turtlebot4_ws/install/turtlebot4_python_tutorials:/home/rokey/turtlebot4_ws/install/turtlebot4_openai_tutorials:/home/rokey/turtlebot4_ws/install/turtlebot4_node:/home/rokey/turtlebot4_ws/install/turtlebot4_navigation:/home/rokey/turtlebot4_ws/install/turtlebot4_ignition_toolbox:/home/rokey/turtlebot4_ws/install/turtlebot4_msgs:/home/rokey/turtlebot4_ws/install/turtlebot4_ignition_gui_plugins:/home/rokey/turtlebot4_ws/install/turtlebot4_description:/home/rokey/turtlebot4_ws/install/turtlebot4_cpp_tutorials:/home/rokey/turtlebot4_ws/install/multirobot_map_merge:/home/rokey/turtlebot4_ws/install/explore_lite:/home/rokey/turtlebot4_ws/install/explore_lite_msgs:/opt/ros/humble PYTHONPATH=/home/rokey/mini_pjt_ws/build/mini_pjt_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rokey/mini_pjt_ws/install/mini_pjt_bringup/lib/python3.10/site-packages:/home/rokey/mini_pjt_ws/build/mini_pjt_vision:/home/rokey/mini_pjt_ws/install/mini_pjt_vision/lib/python3.10/site-packages:/home/rokey/mini_pjt_ws/build/mini_pjt_control:/home/rokey/mini_pjt_ws/install/mini_pjt_control/lib/python3.10/site-packages:/home/rokey/mini_pjt_ws/build/mini_pjt_bringup:/home/rokey/mini_pjt_ws/install/mini_pjt_bringup/lib/python3.10/site-packages:/home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/local/lib/python3.10/dist-packages:/home/rokey/rokey_ws/install/turtlebot4_beep/lib/python3.10/site-packages:/home/rokey/rokey_ws/install/rokey_pjt/lib/python3.10/site-packages:/home/rokey/rokey_ws/install/img_data_subscriber/lib/python3.10/site-packages:/home/rokey/rokey_ws/install/img_data_publisher/lib/python3.10/site-packages:/home/rokey/rokey_ws/install/depth_checker/lib/python3.10/site-packages:/home/rokey/turtlebot4_ws/install/turtlebot4_python_tutorials/lib/python3.10/site-packages:/home/rokey/turtlebot4_ws/install/turtlebot4_openai_tutorials/lib/python3.10/site-packages:/home/rokey/turtlebot4_ws/install/turtlebot4_navigation/local/lib/python3.10/dist-packages:/home/rokey/turtlebot4_ws/install/turtlebot4_msgs/local/lib/python3.10/dist-packages:/home/rokey/turtlebot4_ws/install/explore_lite_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/rokey/mini_pjt_ws/build/mini_pjt_bringup/build --no-deps symlink_data
+[2.352s] Level 1:colcon.colcon_core.environment:checking '/home/rokey/mini_pjt_ws/install/mini_pjt_bringup' for CMake module files
+[2.352s] Level 1:colcon.colcon_core.environment:checking '/home/rokey/mini_pjt_ws/install/mini_pjt_bringup' for CMake config files
+[2.353s] Level 1:colcon.colcon_core.environment:checking '/home/rokey/mini_pjt_ws/install/mini_pjt_bringup/lib'
+[2.353s] Level 1:colcon.colcon_core.environment:checking '/home/rokey/mini_pjt_ws/install/mini_pjt_bringup/bin'
+[2.353s] Level 1:colcon.colcon_core.environment:checking '/home/rokey/mini_pjt_ws/install/mini_pjt_bringup/lib/pkgconfig/mini_pjt_bringup.pc'
+[2.353s] Level 1:colcon.colcon_core.environment:checking '/home/rokey/mini_pjt_ws/install/mini_pjt_bringup/lib/python3.10/site-packages'
+[2.353s] Level 1:colcon.colcon_core.shell:create_environment_hook('mini_pjt_bringup', 'pythonpath')
+[2.353s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rokey/mini_pjt_ws/install/mini_pjt_bringup/share/mini_pjt_bringup/hook/pythonpath.ps1'
+[2.353s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rokey/mini_pjt_ws/install/mini_pjt_bringup/share/mini_pjt_bringup/hook/pythonpath.dsv'
+[2.353s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rokey/mini_pjt_ws/install/mini_pjt_bringup/share/mini_pjt_bringup/hook/pythonpath.sh'
+[2.354s] Level 1:colcon.colcon_core.environment:checking '/home/rokey/mini_pjt_ws/install/mini_pjt_bringup/bin'
+[2.354s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(mini_pjt_bringup)
+[2.354s] INFO:colcon.colcon_core.shell:Creating package script '/home/rokey/mini_pjt_ws/install/mini_pjt_bringup/share/mini_pjt_bringup/package.ps1'
+[2.354s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rokey/mini_pjt_ws/install/mini_pjt_bringup/share/mini_pjt_bringup/package.dsv'
+[2.354s] INFO:colcon.colcon_core.shell:Creating package script '/home/rokey/mini_pjt_ws/install/mini_pjt_bringup/share/mini_pjt_bringup/package.sh'
+[2.355s] INFO:colcon.colcon_core.shell:Creating package script '/home/rokey/mini_pjt_ws/install/mini_pjt_bringup/share/mini_pjt_bringup/package.bash'
+[2.355s] INFO:colcon.colcon_core.shell:Creating package script '/home/rokey/mini_pjt_ws/install/mini_pjt_bringup/share/mini_pjt_bringup/package.zsh'
+[2.355s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rokey/mini_pjt_ws/install/mini_pjt_bringup/share/colcon-core/packages/mini_pjt_bringup)
+[2.355s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[2.355s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[2.355s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[2.355s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[2.358s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[2.358s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[2.358s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[2.371s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[2.371s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/rokey/mini_pjt_ws/install/local_setup.ps1'
+[2.372s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/rokey/mini_pjt_ws/install/_local_setup_util_ps1.py'
+[2.373s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/rokey/mini_pjt_ws/install/setup.ps1'
+[2.375s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/rokey/mini_pjt_ws/install/local_setup.sh'
+[2.375s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/rokey/mini_pjt_ws/install/_local_setup_util_sh.py'
+[2.375s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/rokey/mini_pjt_ws/install/setup.sh'
+[2.376s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/rokey/mini_pjt_ws/install/local_setup.bash'
+[2.377s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/rokey/mini_pjt_ws/install/setup.bash'
+[2.378s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/rokey/mini_pjt_ws/install/local_setup.zsh'
+[2.378s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/rokey/mini_pjt_ws/install/setup.zsh'

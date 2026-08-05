@@ -1,0 +1,25 @@
+[0.678s] Invoking command in '/home/rokey/mini_pjt_ws/build/mini_pjt_vision': AMENT_PREFIX_PATH=/home/rokey/mini_pjt_ws/install/mini_pjt_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/rokey/mini_pjt_ws/install/mini_pjt_interfaces LD_LIBRARY_PATH=/home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/rokey/mini_pjt_ws/build/mini_pjt_vision/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rokey/mini_pjt_ws/install/mini_pjt_vision/lib/python3.10/site-packages:/home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/rokey/mini_pjt_ws/build/mini_pjt_vision/build --no-deps symlink_data
+[0.826s] running develop
+[0.939s] running egg_info
+[0.940s] creating mini_pjt_vision.egg-info
+[0.940s] writing mini_pjt_vision.egg-info/PKG-INFO
+[0.940s] writing dependency_links to mini_pjt_vision.egg-info/dependency_links.txt
+[0.940s] writing entry points to mini_pjt_vision.egg-info/entry_points.txt
+[0.940s] writing requirements to mini_pjt_vision.egg-info/requires.txt
+[0.940s] writing top-level names to mini_pjt_vision.egg-info/top_level.txt
+[0.940s] writing manifest file 'mini_pjt_vision.egg-info/SOURCES.txt'
+[0.941s] reading manifest file 'mini_pjt_vision.egg-info/SOURCES.txt'
+[0.942s] writing manifest file 'mini_pjt_vision.egg-info/SOURCES.txt'
+[0.945s] running build_ext
+[0.945s] Creating /home/rokey/mini_pjt_ws/install/mini_pjt_vision/lib/python3.10/site-packages/mini-pjt-vision.egg-link (link to .)
+[0.947s] Installing onboard_detector script to /home/rokey/mini_pjt_ws/install/mini_pjt_vision/lib/mini_pjt_vision
+[0.947s] Installing webcam_detector script to /home/rokey/mini_pjt_ws/install/mini_pjt_vision/lib/mini_pjt_vision
+[0.947s] 
+[0.947s] Installed /home/rokey/mini_pjt_ws/build/mini_pjt_vision
+[0.948s] running symlink_data
+[0.948s] creating /home/rokey/mini_pjt_ws/install/mini_pjt_vision/share/ament_index
+[0.948s] creating /home/rokey/mini_pjt_ws/install/mini_pjt_vision/share/ament_index/resource_index
+[0.948s] creating /home/rokey/mini_pjt_ws/install/mini_pjt_vision/share/ament_index/resource_index/packages
+[0.948s] symbolically linking /home/rokey/mini_pjt_ws/build/mini_pjt_vision/resource/mini_pjt_vision -> /home/rokey/mini_pjt_ws/install/mini_pjt_vision/share/ament_index/resource_index/packages
+[0.949s] symbolically linking /home/rokey/mini_pjt_ws/build/mini_pjt_vision/package.xml -> /home/rokey/mini_pjt_ws/install/mini_pjt_vision/share/mini_pjt_vision
+[1.001s] Invoked command in '/home/rokey/mini_pjt_ws/build/mini_pjt_vision' returned '0': AMENT_PREFIX_PATH=/home/rokey/mini_pjt_ws/install/mini_pjt_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/rokey/mini_pjt_ws/install/mini_pjt_interfaces LD_LIBRARY_PATH=/home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/rokey/mini_pjt_ws/build/mini_pjt_vision/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rokey/mini_pjt_ws/install/mini_pjt_vision/lib/python3.10/site-packages:/home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/rokey/mini_pjt_ws/build/mini_pjt_vision/build --no-deps symlink_data

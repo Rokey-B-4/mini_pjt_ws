@@ -1,0 +1,30 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from mini_pjt_interfaces/msg/RobotState.msg
+// generated code does not contain a copyright notice
+
+#include "std_msgs/msg/Header.idl"
+
+module mini_pjt_interfaces {
+  module msg {
+    @verbatim (language="comment", text=
+      "미션 상태머신 / 접근 제어 노드가 발행하는 로봇 상태")
+    struct RobotState {
+      std_msgs::msg::Header header;
+
+      @verbatim (language="comment", text=
+        "상태 문자열" "\n"
+        "  INIT, READY, UNDOCKING, NAVIGATING, ARRIVED," "\n"
+        "  SEARCHING, APPROACHING, REACHED, DOCKING, DONE, FAILED, ABORTED")
+      string state;
+
+      @verbatim (language="comment", text=
+        "목표(rc_car)까지의 거리. 미측정 시 -1.0")
+      @unit (value="m")
+      float target_distance;
+
+      @verbatim (language="comment", text=
+        "목표 거리 임계값(기본 0.3m) 이내 도달 여부")
+      boolean arrived;
+    };
+  };
+};

@@ -1,0 +1,245 @@
+# ============================================================
+#  mini_pjt 통합 파라미터
+#  로봇 네임스페이스: robot8 / ROS_DOMAIN_ID: 8
+#  ※ TODO 표시된 값은 실측 후 반드시 교체할 것
+# ============================================================
+
+webcam_detector_node:
+  ros__parameters:
+    # ── 입력 소스 ──
+    # /dev/videoN 의 N 은 USB 재연결/재부팅마다 바뀐다. 실제로 이 장비에서
+    # 30분 사이에 video2 -> video3 -> video2 로 세 번 바뀌었다.
+    # 그래서 인덱스 대신 이름 기반 심볼릭 링크를 쓴다 (재연결돼도 이름은 그대로).
+    #   확인: ls -la /dev/v4l/by-id/
+    #   -index0 = 캡처 노드, -index1 = metadata 노드 (영상은 index0)
+    camera_device: "/dev/v4l/by-id/usb-Jieli_Technology_USB_Composite_Device-video-index0"
+
+    # camera_device 가 비어있을 때만 쓰이는 대체값
+    camera_index: 2
+
+    # 프레임 취득 실패 시 소스 재오픈 간격(초)
+    reopen_interval_sec: 2.0
+
+    # video_path 가 비어있지 않으면 웹캠 대신 mp4 파일을 재생한다 (웹캠 없이 검증용)
+    video_path: ""
+    loop_video: true
+
+    # ── 모델 ──
+    model_path: "/home/rokey/rokey_ws/src/rokey_pjt/rokey_pjt/web_my_data/runs/train/weights/best_v11n.pt"
+    device: "0"          # GPU 0 / CPU 는 "cpu"
+    imgsz: 640
+
+    # ── 검출 & 트리거 ──
+    # TODO: 실제 웹캠 환경에서 테스트 후 conf_thres 재조정
+    conf_thres: 0.5
+    target_class: "car"
+    trigger_frames: 5
+
+    # ── 출력 ──
+    publish_annotated: true
+
+    # 'best_effort' : SensorDataQoS 관례 (기본값). rqt_image_view 도 BEST_EFFORT 로
+    #                 구독하므로 그대로 볼 수 있다.
+    # 'reliable'    : RELIABLE 로만 구독하는 도구를 쓸 때.
+    annotated_reliability: "best_effort"
+
+    target_fps: 30.0
+    jpeg_quality: 80
+    frame_id: "webcam"
+    # image_transport 규약대로 base(raw Image) + '/compressed' 쌍으로 발행한다.
+    # 뷰어에는 항상 base 토픽 '/webcam/annotated' 를 준다.
+    annotated_base_topic: "/webcam/annotated"
+    annotated_transport: "both"      # both | raw | compressed
+    detections_topic: "/webcam/detections"
+    trigger_topic: "/webcam/trigger"
+
+robot_detector_node:
+  ros__parameters:
+    robot_namespace: "/robot8"
+
+    # RGB 스트림 선택 (교재 day2 확인 결과 이 로봇은 preview 로 발행됨)
+    #   preview : /robot8/oakd/rgb/preview/image_raw  (raw Image, 기본)
+    #   isp     : /robot8/oakd/rgb/image_raw(/compressed)  (풀 해상도, 있을 때만)
+    # oakd_probe 로 실제 어떤 스트림이 올라오는지 확인 후 맞출 것.
+    rgb_stream: "preview"
+
+    # isp 모드에서만 의미: true 면 image_raw/compressed, false 면 image_raw
+    use_compressed_rgb: true
+
+    # 온보드(OAK-D) 검출 모델. 교재 day2 best.pt (클래스 {0:'Car', 1:'Dummy'})
+    model_path: "/home/rokey/textbook/to_students/day2/best.pt"
+    device: "0"
+    imgsz: 640
+    conf_thres: 0.5
+    # ★ best.pt 는 'Car'(대문자)다. 노드는 정확히 일치해야 대상으로 인식한다.
+    target_class: "Car"
+
+    # ── RGB + Depth 동기화 ──
+    # slop 은 oakd_probe 결과(권장 slop)를 보고 정한다.
+    # 너무 작으면 콜백이 거의 안 불리고, 너무 크면 시간이 안 맞는 프레임끼리 짝지어져
+    # 거리값이 튄다. 0.01 ~ 0.1 범위에서 비교해볼 것.
+    sync_queue_size: 10
+    # oakd_probe 실측(2026-08-03): preview 8.8Hz vs depth 5.3Hz, stamp 최대차 100ms
+    # -> 권장 slop 0.15. 0.05 로는 드롭이 커서 sync 콜백이 거의 안 불린다.
+    sync_slop_sec: 0.15
+    stats_period_sec: 5.0
+
+    # ── RGB <-> Depth 좌표 정합 ──
+    # 'intrinsic' : K 행렬로 정규화 좌표를 거쳐 재투영 (정식, 기본)
+    # 'scale'     : 해상도 비율로 단순 스케일 (FOV 가 같을 때만 유효, fallback)
+    projection_mode: "intrinsic"
+    log_projection_compare: true    # 두 방식 결과를 로그로 비교
+
+    # ── 거리 산출 ──
+    # 중심 패치를 7x7 -> 11x11 -> 15x15 순으로 키우며 유효 픽셀을 모은다.
+    depth_patch_sizes: [7, 11, 15]
+    min_valid_pixels: 10            # 이만큼 모이면 그 패치 median 사용
+    min_valid_depth: 0.1            # m, 이 미만은 무효(0 포함)
+    max_valid_depth: 10.0           # m, 이 초과는 무효(inf/노이즈)
+
+    # 유효 픽셀이 계속 부족하면 직전 값을 hold, 임계 초과 시 NaN 발행
+    hold_max_count: 10
+
+    # 저역통과 필터: filtered = alpha*raw + (1-alpha)*prev  (1.0=필터 없음)
+    lpf_alpha: 0.4
+    log_distance_filter: true       # 필터 전/후 값을 로그로
+
+    # ── 출력 ──
+    publish_annotated: true
+    annotated_transport: "both"     # both | raw | compressed
+    jpeg_quality: 80
+    detections_topic: "/robot/detections"
+    distance_topic: "/robot/target_distance"
+    annotated_base_topic: "/robot/annotated"
+    target_point_topic: "/robot/target_point"   # Car 3D 위치(카메라프레임) -> target_seeker
+
+mission_manager_node:
+  ros__parameters:
+    robot_namespace: "/robot8"
+
+    # 로봇 실물 없이 상태머신만 검증할 때 true (Nav2/dock 호출 안 함).
+    # 실기 연결 시 false 로 바꿀 것.
+    # [2026-08-04] 실기 이동 위해 false 로 전환.
+    # ★★ 아래 initial_pose / goal_pose 가 [0,0,0] 이면 로봇이 맵 원점으로 잘못 가므로
+    #     실행 전 반드시 실측값으로 채울 것 (pose_tool.py / RViz).
+    dry_run: false
+
+    # true 면 시작 시 도킹 상태를 확인해 undock 하고, DONE 에서 dock 으로 복귀한다.
+    use_dock: true
+
+    # [x(m), y(m), yaw(deg)] — map 프레임. yaw 는 '도' 단위다(라디안 아님).
+    # TODO: RViz2 로 실측한 값으로 교체. README_nav.md 참고.
+    #       basic_map.yaml origin=[-6.12, -1.01, 0], resolution=0.05
+    # [2026-08-04] 언도킹 직후 위치, pose_tool.py amcl 실측(공분산 미수렴이나 점추정은 안정적).
+    #   AMCL 이 주행 시작하면 스스로 수렴하므로 씨앗값으로 충분.
+    initial_pose: [-0.1072, -0.0038, 179.4]
+    # [2026-08-04] (미사용) 임시 목표 주행을 제거하고 SEARCH(제자리 탐색)로 대체함.
+    #   언도킹 후 이 좌표로 가지 않는다. 남겨두되 상태머신에서 참조하지 않음.
+    goal_pose: [-4.7373, 2.5959, 97.11]
+
+    # 주행 실패 시 재시도 횟수 (총 시도 = nav_retry + 1)
+    nav_retry: 2
+
+    nav_timeout_sec: 180.0
+    undock_timeout_sec: 60.0
+    cancel_timeout_sec: 10.0
+    approach_timeout_sec: 60.0
+
+    # AMCL 수렴 판정 (/amcl_pose 공분산 6x6 row-major)
+    #   cov[0]=x분산, cov[7]=y분산, cov[35]=yaw분산
+    amcl_wait_sec: 30.0
+    amcl_cov_xy_max: 0.05      # m^2
+    amcl_cov_yaw_max: 0.06     # rad^2
+    amcl_required_hits: 3      # 연속 N회 만족해야 수렴 인정
+
+    tick_rate_hz: 5.0
+    state_publish_rate_hz: 2.0
+
+    trigger_topic: "/webcam/trigger"
+    state_topic: "/robot/state"
+    approach_enable_topic: "/approach/enable"
+    approach_status_topic: "/approach/status"
+
+    # ── Car 탐색·접근 (임시 목표 주행 없음) ──
+    # 언도킹 후 goal_pose 로 가지 않고 제자리에서 Car 를 찾다가(/robot/seeking) 바로 접근.
+    seek_enable: true
+    seeking_topic: "/robot/seeking"
+    search_rotate: true          # 제자리 회전하며 Car 탐색 (false 면 정지 대기)
+    search_angular: 0.3          # rad/s
+    search_timeout_sec: 60.0     # 이 시간 못 찾으면 FAILED (0=무한)
+
+# Car 의 픽셀(bbox)→depth→TF→map 위치를 추적/표시(RViz 마커)
+target_seeker_node:
+  ros__parameters:
+    map_frame: "map"
+    target_class: "Car"           # best.pt 클래스명(대문자)
+    obstacle_class: "Dummy"
+    confirm_frames: 3            # Car 를 N회(양 카메라 합산) 확인해야 seeking 시작
+    lost_timeout_sec: 2.0        # 이 시간 Car 미검출이면 확인 해제
+    point_timeout_sec: 1.0       # OAK-D 3D 점 신선도
+    publish_rate_hz: 10.0
+    use_webcam: true             # OAK-D + 웹캠 융합
+    target_point_topic: "/robot/target_point"
+    oakd_detections_topic: "/robot/detections"
+    webcam_detections_topic: "/webcam/detections"
+    car_map_point_topic: "/robot/car_map_point"
+    marker_topic: "/robot/car_marker"       # RViz Marker 로 map 위 Car 위치 표시
+    seeking_topic: "/robot/seeking"
+
+# map 좌표로 추적된 Car 지점으로 cmd_vel 직접 주행 (go-to-point)
+car_approach_node:
+  ros__parameters:
+    map_frame: "map"
+    base_frame: "base_link"
+    stop_distance: 0.35          # 이 안이면 정지·도달
+    resume_distance: 0.45        # 도달 후 이보다 멀어지면 재출발(히스테리시스)
+    kp_lin: 0.6
+    kp_ang: 1.2
+    max_linear: 0.15
+    max_angular: 0.6
+    min_linear: 0.04
+    min_angular: 0.10
+    align_threshold: 0.30        # rad, 이보다 방위오차 크면 회전만
+    point_timeout_sec: 1.5
+    control_rate_hz: 10.0
+    # Dummy 보조 반응(근사): 화면 중앙 근처 + 큰 bbox 면 감속/조향
+    dummy_avoid: true
+    obstacle_class: "Dummy"
+    image_width: 320             # OAK-D preview 폭
+    dummy_center_band: 0.35
+    dummy_area_frac: 0.06
+    dummy_steer: 0.4
+    dummy_slow: 0.5
+    cmd_vel_topic: "/robot8/cmd_vel"
+    enable_topic: "/approach/enable"
+    status_topic: "/approach/status"
+    car_map_point_topic: "/robot/car_map_point"
+    detections_topic: "/robot/detections"
+
+approach_controller:
+  ros__parameters:
+    robot_namespace: "/robot8"
+
+    # ── 정지 조건 ──
+    stop_distance_m: 0.3
+    distance_tolerance_m: 0.05
+
+    # ── 속도 / 게인 ──
+    max_linear_speed: 0.15
+    max_angular_speed: 0.5
+    kp_linear: 0.4
+    kp_angular: 0.004            # 픽셀 오차 -> rad/s
+    center_tolerance_px: 30
+
+    image_width: 640
+    target_class: "car"
+    detection_timeout_sec: 1.0
+    control_rate_hz: 10.0
+
+    cmd_vel_topic: "/robot8/cmd_vel"
+    # robot_detector_node 와 반드시 일치해야 한다.
+    detections_topic: "/robot/detections"
+    distance_topic: "/robot/target_distance"
+    # mission_manager_node 와 반드시 일치해야 한다.
+    approach_enable_topic: "/approach/enable"
+    state_topic: "/approach/status"

@@ -1,0 +1,4 @@
+source;share/mini_pjt_interfaces/local_setup.bash
+source;share/mini_pjt_interfaces/local_setup.dsv
+source;share/mini_pjt_interfaces/local_setup.sh
+source;share/mini_pjt_interfaces/local_setup.zsh

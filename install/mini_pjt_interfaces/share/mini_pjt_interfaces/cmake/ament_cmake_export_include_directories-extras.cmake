@@ -1,0 +1,1 @@
+/home/rokey/mini_pjt_ws/build/mini_pjt_interfaces/ament_cmake_export_include_directories/ament_cmake_export_include_directories-extras.cmake

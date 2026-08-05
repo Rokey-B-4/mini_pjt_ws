@@ -1,0 +1,4 @@
+source;share/mini_pjt_interfaces/environment/ament_prefix_path.sh
+source;share/mini_pjt_interfaces/environment/library_path.sh
+source;share/mini_pjt_interfaces/environment/path.sh
+source;share/mini_pjt_interfaces/environment/pythonpath.sh

@@ -1,0 +1,16 @@
+[0.544s] Invoking command in '/home/rokey/mini_pjt_ws/build/mini_pjt_bringup': AMENT_PREFIX_PATH=/home/rokey/mini_pjt_ws/install/mini_pjt_vision:/home/rokey/mini_pjt_ws/install/mini_pjt_control:/home/rokey/mini_pjt_ws/install/mini_pjt_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/rokey/mini_pjt_ws/install/mini_pjt_interfaces LD_LIBRARY_PATH=/home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/rokey/mini_pjt_ws/build/mini_pjt_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rokey/mini_pjt_ws/install/mini_pjt_bringup/lib/python3.10/site-packages:/home/rokey/mini_pjt_ws/build/mini_pjt_vision:/home/rokey/mini_pjt_ws/install/mini_pjt_vision/lib/python3.10/site-packages:/home/rokey/mini_pjt_ws/build/mini_pjt_control:/home/rokey/mini_pjt_ws/install/mini_pjt_control/lib/python3.10/site-packages:/home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/rokey/mini_pjt_ws/build/mini_pjt_bringup/build --no-deps symlink_data
+[0.700s] running develop
+[0.791s] running egg_info
+[0.791s] writing mini_pjt_bringup.egg-info/PKG-INFO
+[0.791s] writing dependency_links to mini_pjt_bringup.egg-info/dependency_links.txt
+[0.791s] writing entry points to mini_pjt_bringup.egg-info/entry_points.txt
+[0.791s] writing requirements to mini_pjt_bringup.egg-info/requires.txt
+[0.791s] writing top-level names to mini_pjt_bringup.egg-info/top_level.txt
+[0.793s] reading manifest file 'mini_pjt_bringup.egg-info/SOURCES.txt'
+[0.793s] writing manifest file 'mini_pjt_bringup.egg-info/SOURCES.txt'
+[0.794s] running build_ext
+[0.794s] Creating /home/rokey/mini_pjt_ws/install/mini_pjt_bringup/lib/python3.10/site-packages/mini-pjt-bringup.egg-link (link to .)
+[0.795s] 
+[0.795s] Installed /home/rokey/mini_pjt_ws/build/mini_pjt_bringup
+[0.795s] running symlink_data
+[0.814s] Invoked command in '/home/rokey/mini_pjt_ws/build/mini_pjt_bringup' returned '0': AMENT_PREFIX_PATH=/home/rokey/mini_pjt_ws/install/mini_pjt_vision:/home/rokey/mini_pjt_ws/install/mini_pjt_control:/home/rokey/mini_pjt_ws/install/mini_pjt_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/rokey/mini_pjt_ws/install/mini_pjt_interfaces LD_LIBRARY_PATH=/home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/rokey/mini_pjt_ws/build/mini_pjt_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rokey/mini_pjt_ws/install/mini_pjt_bringup/lib/python3.10/site-packages:/home/rokey/mini_pjt_ws/build/mini_pjt_vision:/home/rokey/mini_pjt_ws/install/mini_pjt_vision/lib/python3.10/site-packages:/home/rokey/mini_pjt_ws/build/mini_pjt_control:/home/rokey/mini_pjt_ws/install/mini_pjt_control/lib/python3.10/site-packages:/home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/rokey/mini_pjt_ws/build/mini_pjt_bringup/build --no-deps symlink_data

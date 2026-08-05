@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>mini_pjt_bringup</name>
+  <version>0.0.1</version>
+  <description>Launch files, parameters and map for the TurtleBot4 vision mini project</description>
+  <maintainer email="ts4955ts@gmail.com">rokey</maintainer>
+  <license>Apache-2.0</license>
+
+  <exec_depend>launch</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
+  <exec_depend>mini_pjt_vision</exec_depend>
+  <exec_depend>mini_pjt_control</exec_depend>
+  <exec_depend>mini_pjt_interfaces</exec_depend>
+
+  <test_depend>ament_copyright</test_depend>
+  <test_depend>ament_flake8</test_depend>
+  <test_depend>ament_pep257</test_depend>
+  <test_depend>python3-pytest</test_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>

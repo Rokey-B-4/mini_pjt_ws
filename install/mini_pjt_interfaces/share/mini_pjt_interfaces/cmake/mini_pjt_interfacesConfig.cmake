@@ -1,0 +1,1 @@
+/home/rokey/mini_pjt_ws/build/mini_pjt_interfaces/ament_cmake_core/mini_pjt_interfacesConfig.cmake

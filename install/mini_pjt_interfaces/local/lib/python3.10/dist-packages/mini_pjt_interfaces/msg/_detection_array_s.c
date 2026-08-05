@@ -1,0 +1,1 @@
+/home/rokey/mini_pjt_ws/build/mini_pjt_interfaces/rosidl_generator_py/mini_pjt_interfaces/msg/_detection_array_s.c

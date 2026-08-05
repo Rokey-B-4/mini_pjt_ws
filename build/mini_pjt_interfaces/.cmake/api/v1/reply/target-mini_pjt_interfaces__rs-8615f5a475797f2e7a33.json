@@ -1,0 +1,73 @@
+{
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target"
+		],
+		"files" : 
+		[
+			"/home/rokey/mini_pjt_ws/build/mini_pjt_interfaces/mini_pjt_interfaces__rs/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 35,
+				"parent" : 0
+			}
+		]
+	},
+	"id" : "mini_pjt_interfaces__rs::@516420f4eaf39ccd04cf",
+	"name" : "mini_pjt_interfaces__rs",
+	"paths" : 
+	{
+		"build" : "mini_pjt_interfaces__rs",
+		"source" : "/home/rokey/mini_pjt_ws/build/mini_pjt_interfaces/mini_pjt_interfaces__rs"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				1,
+				2
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "/home/rokey/mini_pjt_ws/build/mini_pjt_interfaces/mini_pjt_interfaces__rs/CMakeFiles/mini_pjt_interfaces__rs",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "/home/rokey/mini_pjt_ws/build/mini_pjt_interfaces/mini_pjt_interfaces__rs/CMakeFiles/mini_pjt_interfaces__rs.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "/home/rokey/mini_pjt_ws/build/mini_pjt_interfaces/rosidl_generator_rs/mini_pjt_interfaces/rust/src/lib.rs.rule",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "UTILITY"
+}

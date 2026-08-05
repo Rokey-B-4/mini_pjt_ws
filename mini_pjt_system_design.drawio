@@ -1,0 +1,134 @@
+<mxfile host="app.diagrams.net" agent="mini_pjt" version="24.0.0">
+  <diagram name="1. 플로우차트" id="flow">
+    <mxGraphModel dx="900" dy="700" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Left column: webcam + mission (PC1) -->
+        <mxCell id="f_start" value="시작" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#333333;" vertex="1" parent="1"><mxGeometry x="80" y="40" width="120" height="40" as="geometry"/></mxCell>
+        <mxCell id="f_wc1" value="웹캠 프레임 취득&lt;br&gt;&lt;font color=&quot;#666666&quot;&gt;640×640 / 30fps&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;" vertex="1" parent="1"><mxGeometry x="60" y="110" width="160" height="50" as="geometry"/></mxCell>
+        <mxCell id="f_wc2" value="YOLOv11n 추론&lt;br&gt;&lt;font color=&quot;#666666&quot;&gt;/webcam/annotated 발행&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;" vertex="1" parent="1"><mxGeometry x="60" y="190" width="160" height="50" as="geometry"/></mxCell>
+        <mxCell id="f_d1" value="Car 감지?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;" vertex="1" parent="1"><mxGeometry x="80" y="270" width="120" height="70" as="geometry"/></mxCell>
+        <mxCell id="f_wc3" value="감지결과 · 엣지 트리거 발행&lt;br&gt;&lt;font color=&quot;#666666&quot;&gt;/webcam/detections, /webcam/trigger&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;" vertex="1" parent="1"><mxGeometry x="50" y="380" width="180" height="60" as="geometry"/></mxCell>
+        <mxCell id="f_und" value="AMR 기동&lt;br&gt;&lt;font color=&quot;#666666&quot;&gt;undock · setInitialPose · AMCL 수렴&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;" vertex="1" parent="1"><mxGeometry x="50" y="470" width="180" height="60" as="geometry"/></mxCell>
+        <mxCell id="f_nav" value="목표 지점 이동&lt;br&gt;&lt;font color=&quot;#666666&quot;&gt;Nav2 · LiDAR costmap 회피&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;" vertex="1" parent="1"><mxGeometry x="50" y="560" width="180" height="60" as="geometry"/></mxCell>
+        <mxCell id="f_d2" value="목표 도착 or&lt;br&gt;Car 발견?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;" vertex="1" parent="1"><mxGeometry x="70" y="650" width="140" height="80" as="geometry"/></mxCell>
+
+        <!-- Right column: onboard tracking (PC2) -->
+        <mxCell id="f_on1" value="RGB(preview)+Depth 동기 취득&lt;br&gt;&lt;font color=&quot;#666666&quot;&gt;ApproximateTimeSync (slop 0.15)&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;" vertex="1" parent="1"><mxGeometry x="360" y="40" width="220" height="50" as="geometry"/></mxCell>
+        <mxCell id="f_on2" value="YOLOv8 추론 (best.pt)&lt;br&gt;&lt;font color=&quot;#666666&quot;&gt;클래스: Car / Dummy&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;" vertex="1" parent="1"><mxGeometry x="360" y="120" width="220" height="50" as="geometry"/></mxCell>
+        <mxCell id="f_d3" value="Car 감지?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;" vertex="1" parent="1"><mxGeometry x="410" y="200" width="120" height="70" as="geometry"/></mxCell>
+        <mxCell id="f_on3" value="중심 거리 산출&lt;br&gt;&lt;font color=&quot;#666666&quot;&gt;패치 7→11→15 median · 유효필터 · LPF&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;" vertex="1" parent="1"><mxGeometry x="360" y="300" width="220" height="60" as="geometry"/></mxCell>
+        <mxCell id="f_on4" value="★ 표적 좌표 변환&lt;br&gt;&lt;font color=&quot;#666666&quot;&gt;픽셀+깊이 → K⁻¹ 역투영 → TF → map 좌표&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1"><mxGeometry x="360" y="390" width="220" height="60" as="geometry"/></mxCell>
+        <mxCell id="f_on5" value="목표 접근 (cmd_vel)&lt;br&gt;&lt;font color=&quot;#666666&quot;&gt;map 좌표 go-to-point · 정렬→전진&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;" vertex="1" parent="1"><mxGeometry x="360" y="480" width="220" height="60" as="geometry"/></mxCell>
+        <mxCell id="f_d4" value="거리 ≤ 0.35 m?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;" vertex="1" parent="1"><mxGeometry x="405" y="570" width="130" height="80" as="geometry"/></mxCell>
+        <mxCell id="f_on6" value="정지 및 도달 알림&lt;br&gt;&lt;font color=&quot;#666666&quot;&gt;/approach/status (arrived)&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;" vertex="1" parent="1"><mxGeometry x="360" y="680" width="220" height="50" as="geometry"/></mxCell>
+        <mxCell id="f_end" value="종료" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#333333;" vertex="1" parent="1"><mxGeometry x="410" y="760" width="120" height="40" as="geometry"/></mxCell>
+
+        <!-- edges left -->
+        <mxCell id="fe1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" edge="1" parent="1" source="f_start" target="f_wc1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="fe2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" edge="1" parent="1" source="f_wc1" target="f_wc2"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="fe3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" edge="1" parent="1" source="f_wc2" target="f_d1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="fe4" value="아니오" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=0;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="f_d1" target="f_wc1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="fe5" value="예" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" edge="1" parent="1" source="f_d1" target="f_wc3"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="fe6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" edge="1" parent="1" source="f_wc3" target="f_und"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="fe7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" edge="1" parent="1" source="f_und" target="f_nav"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="fe8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" edge="1" parent="1" source="f_nav" target="f_d2"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="fe9" value="아니오" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=0;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="f_d2" target="f_nav"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="fe10" value="예 (Car 발견 → 추적 전환)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=1;exitY=0.5;entryX=0.5;entryY=1;" edge="1" parent="1" source="f_d2" target="f_on5"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+        <!-- edges right -->
+        <mxCell id="fe11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" edge="1" parent="1" source="f_on1" target="f_on2"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="fe12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" edge="1" parent="1" source="f_on2" target="f_d3"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="fe13" value="아니오" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=0;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="f_d3" target="f_on1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="fe14" value="예" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" edge="1" parent="1" source="f_d3" target="f_on3"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="fe15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" edge="1" parent="1" source="f_on3" target="f_on4"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="fe16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" edge="1" parent="1" source="f_on4" target="f_on5"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="fe17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" edge="1" parent="1" source="f_on5" target="f_d4"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="fe18" value="아니오" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=1;exitY=0.5;entryX=1;entryY=0.5;" edge="1" parent="1" source="f_d4" target="f_on5"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="fe19" value="예" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" edge="1" parent="1" source="f_d4" target="f_on6"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="fe20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" edge="1" parent="1" source="f_on6" target="f_end"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+        <mxCell id="f_lbl_l" value="① 웹캠 트리거 + 미션 주행 (PC1)" style="text;html=1;fontStyle=1;fontColor=#3333cc;align=left;" vertex="1" parent="1"><mxGeometry x="40" y="10" width="260" height="20" as="geometry"/></mxCell>
+        <mxCell id="f_lbl_r" value="② 온보드 인식 + cmd_vel 추적 (PC2)" style="text;html=1;fontStyle=1;fontColor=#cc0000;align=left;" vertex="1" parent="1"><mxGeometry x="360" y="10" width="260" height="20" as="geometry"/></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+
+  <diagram name="2. 미션 상태머신" id="fsm">
+    <mxGraphModel dx="900" dy="700" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="750" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="s_idle" value="&lt;b&gt;IDLE&lt;/b&gt;&lt;br&gt;웹캠 트리거 대기" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1"><mxGeometry x="280" y="40" width="240" height="50" as="geometry"/></mxCell>
+        <mxCell id="s_undock" value="&lt;b&gt;UNDOCK&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#666666&quot;&gt;undock · setInitialPose · waitUntilNav2Active · AMCL 수렴&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1"><mxGeometry x="280" y="140" width="240" height="70" as="geometry"/></mxCell>
+        <mxCell id="s_nav" value="&lt;b&gt;NAV&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#666666&quot;&gt;goToPose(goal_pose) · Nav2 LiDAR 회피&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1"><mxGeometry x="280" y="260" width="240" height="60" as="geometry"/></mxCell>
+        <mxCell id="s_appr" value="&lt;b&gt;APPROACH&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#666666&quot;&gt;Nav2 취소 → /approach/enable → cmd_vel 추적 (car_approach)&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1"><mxGeometry x="280" y="370" width="240" height="80" as="geometry"/></mxCell>
+        <mxCell id="s_done" value="&lt;b&gt;DONE&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#666666&quot;&gt;cmd_vel 0 · /robot/state · dock 복귀&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1"><mxGeometry x="280" y="500" width="240" height="60" as="geometry"/></mxCell>
+        <mxCell id="s_failed" value="&lt;b&gt;FAILED&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#666666&quot;&gt;정지 · 수동 개입&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1"><mxGeometry x="620" y="370" width="180" height="60" as="geometry"/></mxCell>
+
+        <mxCell id="se1" value="/webcam/trigger" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" edge="1" parent="1" source="s_idle" target="s_undock"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="se2" value="기동 완료" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" edge="1" parent="1" source="s_undock" target="s_nav"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="se3" value="Car 발견(/robot/seeking) 또는 목적지 도착" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" edge="1" parent="1" source="s_nav" target="s_appr"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="se4" value="거리 ≤ 0.35 &amp; arrived" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" edge="1" parent="1" source="s_appr" target="s_done"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="se5" value="undock 실패" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;exitX=1;exitY=0.5;" edge="1" parent="1" source="s_undock" target="s_failed"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="se6" value="주행 실패(재시도 소진)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;exitX=1;exitY=0.5;" edge="1" parent="1" source="s_nav" target="s_failed"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="se7" value="취소 실패 / 접근 타임아웃" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;exitX=1;exitY=0.5;" edge="1" parent="1" source="s_appr" target="s_failed"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+        <mxCell id="s_note" value="&lt;b&gt;예외 복구 (실제 구현)&lt;/b&gt;&lt;br&gt;· TF 실패 → target_seeker가 이전 map 좌표 유지(sticky)&lt;br&gt;· 깊이 0 · NaN → robot_detector hold / 프레임 스킵&lt;br&gt;· Car 소실 → /robot/seeking 해제 → 목적지 주행 복귀&lt;br&gt;&lt;br&gt;&lt;font color=&quot;#999999&quot;&gt;※ &apos;제자리 회전 재탐색(SEARCH)&apos;는 아직 미구현&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#999999;align=left;verticalAlign=top;spacing=8;" vertex="1" parent="1"><mxGeometry x="580" y="470" width="260" height="140" as="geometry"/></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+
+  <diagram name="3. 노드 아키텍처" id="arch">
+    <mxGraphModel dx="1000" dy="750" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="800" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Containers (background) -->
+        <mxCell id="a_pc1" value="PC1 · 미션 / 웹캠 / Nav" style="rounded=1;dashed=1;strokeColor=#3333cc;fillColor=none;html=1;verticalAlign=top;fontColor=#3333cc;fontStyle=1;spacing=8;" vertex="1" parent="1"><mxGeometry x="240" y="40" width="700" height="230" as="geometry"/></mxCell>
+        <mxCell id="a_pc2" value="PC2 · 로봇 비전 / 추적" style="rounded=1;dashed=1;strokeColor=#cc0000;fillColor=none;html=1;verticalAlign=top;fontColor=#cc0000;fontStyle=1;spacing=8;" vertex="1" parent="1"><mxGeometry x="240" y="340" width="720" height="320" as="geometry"/></mxCell>
+
+        <!-- Robot -->
+        <mxCell id="a_robot" value="&lt;b&gt;터틀봇4 (/robot8)&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#666666&quot;&gt;OAK-D · Create3&lt;br&gt;Nav2 · TF&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="40" y="400" width="150" height="180" as="geometry"/></mxCell>
+
+        <!-- PC1 nodes -->
+        <mxCell id="a_usb" value="USB 웹캠&lt;br&gt;&lt;font color=&quot;#666666&quot;&gt;고정 시점&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;" vertex="1" parent="1"><mxGeometry x="270" y="130" width="90" height="60" as="geometry"/></mxCell>
+        <mxCell id="a_wcnode" value="&lt;b&gt;webcam_detector_node&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#666666&quot;&gt;YOLOv11n · 엣지 트리거&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;" vertex="1" parent="1"><mxGeometry x="400" y="120" width="180" height="70" as="geometry"/></mxCell>
+        <mxCell id="a_mission" value="&lt;b&gt;mission_manager_node&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#666666&quot;&gt;상태머신 · 전체 조율&lt;br&gt;(TurtleBot4Navigator 내장)&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1"><mxGeometry x="700" y="90" width="210" height="100" as="geometry"/></mxCell>
+
+        <!-- PC2 nodes -->
+        <mxCell id="a_rdet" value="&lt;b&gt;robot_detector_node&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#666666&quot;&gt;RGB(preview)+Depth 동기 · YOLOv8&lt;br&gt;bbox 중심+깊이 → 3D 역투영&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;" vertex="1" parent="1"><mxGeometry x="300" y="400" width="210" height="80" as="geometry"/></mxCell>
+        <mxCell id="a_tf" value="&lt;b&gt;TF 트리&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#666666&quot;&gt;map ← odom ← base ← oakd&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#999999;" vertex="1" parent="1"><mxGeometry x="300" y="560" width="210" height="60" as="geometry"/></mxCell>
+        <mxCell id="a_seeker" value="&lt;b&gt;target_seeker_node&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#666666&quot;&gt;target_point + TF → map 좌표&lt;br&gt;OAK-D+웹캠 융합 · RViz 마커&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;" vertex="1" parent="1"><mxGeometry x="580" y="400" width="210" height="80" as="geometry"/></mxCell>
+        <mxCell id="a_appr" value="&lt;b&gt;car_approach_node&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#666666&quot;&gt;map go-to-point · 정렬→전진&lt;br&gt;거리 0.35m 정지&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;" vertex="1" parent="1"><mxGeometry x="580" y="560" width="210" height="80" as="geometry"/></mxCell>
+        <mxCell id="a_view" value="RViz / rqt&lt;br&gt;&lt;font color=&quot;#666666&quot;&gt;/robot/annotated · /robot/car_marker&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#999999;dashed=1;" vertex="1" parent="1"><mxGeometry x="830" y="400" width="120" height="80" as="geometry"/></mxCell>
+
+        <!-- edges: data flow (solid) -->
+        <mxCell id="ae_usb" value="USB 640×640" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" edge="1" parent="1" source="a_usb" target="a_wcnode"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="ae_trig" value="/webcam/trigger" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" edge="1" parent="1" source="a_wcnode" target="a_mission"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="ae_rgb" value="RGB(preview)·Depth·camera_info" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" edge="1" parent="1" source="a_robot" target="a_rdet"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="ae_tf" value="/robot8/tf" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" edge="1" parent="1" source="a_robot" target="a_tf"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="ae_tp" value="/robot/target_point · detections · target_distance" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" edge="1" parent="1" source="a_rdet" target="a_seeker"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="ae_lk1" value="lookup (map ← oakd)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" edge="1" parent="1" source="a_tf" target="a_seeker"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="ae_lk2" value="lookup (map → base_link)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" edge="1" parent="1" source="a_tf" target="a_appr"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="ae_cmp" value="/robot/car_map_point" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" edge="1" parent="1" source="a_seeker" target="a_appr"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="ae_wcdet" value="/webcam/detections (융합)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=0;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="a_wcnode" target="a_seeker"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="ae_marker" value="/robot/car_marker · annotated" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" edge="1" parent="1" source="a_seeker" target="a_view"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="ae_cmd" value="/robot8/cmd_vel" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#cc0000;exitX=0;exitY=0.5;" edge="1" parent="1" source="a_appr" target="a_robot"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="ae_navact" value="undock · Nav2 goal(goal_pose)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=0;exitY=1;" edge="1" parent="1" source="a_mission" target="a_robot"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+        <!-- edges: control/status (dashed) -->
+        <mxCell id="ae_seek" value="/robot/seeking (추적 시작)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;" edge="1" parent="1" source="a_seeker" target="a_mission"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="ae_en" value="/approach/enable" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;" edge="1" parent="1" source="a_mission" target="a_appr"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="ae_st" value="/approach/status" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;" edge="1" parent="1" source="a_appr" target="a_mission"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+        <!-- legend -->
+        <mxCell id="a_leg" value="실선 = 데이터 흐름   ·   점선 = 제어 / 상태 피드백&lt;br&gt;ROS_DOMAIN_ID=8 · Discovery Server(192.168.101.108:11811) · ROS_SUPER_CLIENT=True&lt;br&gt;PC2 노드는 TF 리맵 필요:  -r /tf:=/robot8/tf  -r /tf_static:=/robot8/tf_static" style="text;html=1;align=left;fontColor=#666666;spacing=4;" vertex="1" parent="1"><mxGeometry x="40" y="680" width="720" height="60" as="geometry"/></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

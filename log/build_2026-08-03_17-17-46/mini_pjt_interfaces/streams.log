@@ -1,0 +1,260 @@
+[0.006s] Invoking command in '/home/rokey/mini_pjt_ws/build/mini_pjt_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/rokey/mini_pjt_ws/src/mini_pjt_interfaces -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/rokey/mini_pjt_ws/install/mini_pjt_interfaces
+[0.079s] -- The C compiler identification is GNU 11.4.0
+[0.132s] -- The CXX compiler identification is GNU 11.4.0
+[0.138s] -- Detecting C compiler ABI info
+[0.188s] -- Detecting C compiler ABI info - done
+[0.193s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.193s] -- Detecting C compile features
+[0.194s] -- Detecting C compile features - done
+[0.197s] -- Detecting CXX compiler ABI info
+[0.250s] -- Detecting CXX compiler ABI info - done
+[0.253s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.254s] -- Detecting CXX compile features
+[0.254s] -- Detecting CXX compile features - done
+[0.256s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.358s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.394s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.416s] -- Found rosidl_default_generators: 1.2.1 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[0.418s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.423s] -- Found rosidl_adapter: 3.1.9 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.454s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.479s] -- Found std_msgs: 4.9.1 (/opt/ros/humble/share/std_msgs/cmake)
+[0.656s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[0.786s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.944s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.960s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") 
+[0.961s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[0.978s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") 
+[0.978s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.978s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[0.978s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[0.991s] -- Found PythonExtra: .so  
+[1.062s] -- Configuring done
+[1.078s] -- Generating done
+[1.084s] -- Build files have been written to: /home/rokey/mini_pjt_ws/build/mini_pjt_interfaces
+[1.089s] Invoked command in '/home/rokey/mini_pjt_ws/build/mini_pjt_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/rokey/mini_pjt_ws/src/mini_pjt_interfaces -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/rokey/mini_pjt_ws/install/mini_pjt_interfaces
+[1.090s] Invoking command in '/home/rokey/mini_pjt_ws/build/mini_pjt_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/rokey/mini_pjt_ws/build/mini_pjt_interfaces -- -j22 -l22
+[1.117s] [  2%] Generating C code for ROS interfaces
+[1.125s] [  4%] Generating Rust code for ROS interfaces
+[1.125s] [  6%] Generating C++ code for ROS interfaces
+[1.131s] [  6%] Built target ament_cmake_python_symlink_mini_pjt_interfaces
+[1.286s] running egg_info
+[1.287s] creating mini_pjt_interfaces.egg-info
+[1.287s] writing mini_pjt_interfaces.egg-info/PKG-INFO
+[1.287s] writing dependency_links to mini_pjt_interfaces.egg-info/dependency_links.txt
+[1.287s] writing top-level names to mini_pjt_interfaces.egg-info/top_level.txt
+[1.287s] writing manifest file 'mini_pjt_interfaces.egg-info/SOURCES.txt'
+[1.288s] reading manifest file 'mini_pjt_interfaces.egg-info/SOURCES.txt'
+[1.288s] writing manifest file 'mini_pjt_interfaces.egg-info/SOURCES.txt'
+[1.307s] [  6%] Built target ament_cmake_python_build_mini_pjt_interfaces_egg
+[1.365s] [  6%] Built target mini_pjt_interfaces__rs
+[1.385s] [  6%] Built target mini_pjt_interfaces__cpp
+[1.393s] [ 10%] Generating C++ type support for eProsima Fast-RTPS
+[1.393s] [ 10%] Generating C++ type support dispatch for ROS interfaces
+[1.393s] [ 12%] Generating C++ introspection for ROS interfaces
+[1.399s] [ 14%] Building C object CMakeFiles/mini_pjt_interfaces__rosidl_generator_c.dir/rosidl_generator_c/mini_pjt_interfaces/msg/detail/robot_state__functions.c.o
+[1.399s] [ 16%] Building C object CMakeFiles/mini_pjt_interfaces__rosidl_generator_c.dir/rosidl_generator_c/mini_pjt_interfaces/msg/detail/detection_array__functions.c.o
+[1.401s] [ 18%] Building C object CMakeFiles/mini_pjt_interfaces__rosidl_generator_c.dir/rosidl_generator_c/mini_pjt_interfaces/msg/detail/detection__functions.c.o
+[1.445s] [ 20%] Linking C shared library libmini_pjt_interfaces__rosidl_generator_c.so
+[1.475s] [ 20%] Built target mini_pjt_interfaces__rosidl_generator_c
+[1.484s] [ 27%] Generating C type support dispatch for ROS interfaces
+[1.484s] [ 27%] Generating C type support for eProsima Fast-RTPS
+[1.484s] [ 27%] Generating C introspection for ROS interfaces
+[1.630s] [ 29%] Building CXX object CMakeFiles/mini_pjt_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/mini_pjt_interfaces/msg/detection_array__type_support.cpp.o
+[1.630s] [ 31%] Building CXX object CMakeFiles/mini_pjt_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/mini_pjt_interfaces/msg/robot_state__type_support.cpp.o
+[1.632s] [ 33%] Building CXX object CMakeFiles/mini_pjt_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/mini_pjt_interfaces/msg/detection__type_support.cpp.o
+[1.644s] [ 39%] Building CXX object CMakeFiles/mini_pjt_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/mini_pjt_interfaces/msg/detail/robot_state__type_support.cpp.o
+[1.644s] [ 39%] Building CXX object CMakeFiles/mini_pjt_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/mini_pjt_interfaces/msg/detail/detection_array__type_support.cpp.o
+[1.644s] [ 39%] Building CXX object CMakeFiles/mini_pjt_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/mini_pjt_interfaces/msg/detail/detection__type_support.cpp.o
+[1.658s] [ 41%] Building CXX object CMakeFiles/mini_pjt_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/mini_pjt_interfaces/msg/detail/dds_fastrtps/robot_state__type_support.cpp.o
+[1.658s] [ 43%] Building CXX object CMakeFiles/mini_pjt_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/mini_pjt_interfaces/msg/detail/dds_fastrtps/detection_array__type_support.cpp.o
+[1.660s] [ 45%] Building CXX object CMakeFiles/mini_pjt_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/mini_pjt_interfaces/msg/detail/dds_fastrtps/detection__type_support.cpp.o
+[1.780s] [ 52%] Building C object CMakeFiles/mini_pjt_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/mini_pjt_interfaces/msg/detail/detection_array__type_support.c.o
+[1.780s] [ 52%] Building C object CMakeFiles/mini_pjt_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/mini_pjt_interfaces/msg/detail/robot_state__type_support.c.o
+[1.780s] [ 52%] Building C object CMakeFiles/mini_pjt_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/mini_pjt_interfaces/msg/detail/detection__type_support.c.o
+[1.797s] [ 58%] Building CXX object CMakeFiles/mini_pjt_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/mini_pjt_interfaces/msg/detail/robot_state__type_support_c.cpp.o
+[1.797s] [ 58%] Building CXX object CMakeFiles/mini_pjt_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/mini_pjt_interfaces/msg/detail/detection_array__type_support_c.cpp.o
+[1.797s] [ 58%] Building CXX object CMakeFiles/mini_pjt_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/mini_pjt_interfaces/msg/detail/detection__type_support_c.cpp.o
+[1.821s] [ 60%] Linking C shared library libmini_pjt_interfaces__rosidl_typesupport_introspection_c.so
+[1.824s] [ 66%] Building CXX object CMakeFiles/mini_pjt_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/mini_pjt_interfaces/msg/robot_state__type_support.cpp.o
+[1.824s] [ 66%] Building CXX object CMakeFiles/mini_pjt_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/mini_pjt_interfaces/msg/detection__type_support.cpp.o
+[1.824s] [ 66%] Building CXX object CMakeFiles/mini_pjt_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/mini_pjt_interfaces/msg/detection_array__type_support.cpp.o
+[1.853s] [ 66%] Built target mini_pjt_interfaces__rosidl_typesupport_introspection_c
+[1.854s] [ 68%] Linking CXX shared library libmini_pjt_interfaces__rosidl_typesupport_c.so
+[1.890s] [ 68%] Built target mini_pjt_interfaces__rosidl_typesupport_c
+[1.928s] [ 70%] Linking CXX shared library libmini_pjt_interfaces__rosidl_typesupport_cpp.so
+[1.960s] [ 70%] Built target mini_pjt_interfaces__rosidl_typesupport_cpp
+[2.024s] [ 72%] Linking CXX shared library libmini_pjt_interfaces__rosidl_typesupport_fastrtps_cpp.so
+[2.049s] [ 75%] Linking CXX shared library libmini_pjt_interfaces__rosidl_typesupport_introspection_cpp.so
+[2.066s] [ 77%] Linking CXX shared library libmini_pjt_interfaces__rosidl_typesupport_fastrtps_c.so
+[2.075s] [ 77%] Built target mini_pjt_interfaces__rosidl_typesupport_fastrtps_cpp
+[2.108s] [ 77%] Built target mini_pjt_interfaces__rosidl_typesupport_introspection_cpp
+[2.117s] [ 77%] Built target mini_pjt_interfaces__rosidl_typesupport_fastrtps_c
+[2.131s] [ 77%] Built target mini_pjt_interfaces
+[2.145s] [ 79%] Generating Python code for ROS interfaces
+[2.492s] [ 79%] Built target mini_pjt_interfaces__py
+[2.506s] [ 83%] Building C object CMakeFiles/mini_pjt_interfaces__rosidl_generator_py.dir/rosidl_generator_py/mini_pjt_interfaces/msg/_robot_state_s.c.o
+[2.507s] [ 83%] Building C object CMakeFiles/mini_pjt_interfaces__rosidl_generator_py.dir/rosidl_generator_py/mini_pjt_interfaces/msg/_detection_s.c.o
+[2.507s] [ 85%] Building C object CMakeFiles/mini_pjt_interfaces__rosidl_generator_py.dir/rosidl_generator_py/mini_pjt_interfaces/msg/_detection_array_s.c.o
+[2.586s] [ 87%] Linking C shared library rosidl_generator_py/mini_pjt_interfaces/libmini_pjt_interfaces__rosidl_generator_py.so
+[2.616s] [ 87%] Built target mini_pjt_interfaces__rosidl_generator_py
+[2.630s] [ 89%] Building C object CMakeFiles/mini_pjt_interfaces__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/mini_pjt_interfaces/_mini_pjt_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o
+[2.630s] [ 91%] Building C object CMakeFiles/mini_pjt_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/mini_pjt_interfaces/_mini_pjt_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o
+[2.631s] [ 93%] Building C object CMakeFiles/mini_pjt_interfaces__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/mini_pjt_interfaces/_mini_pjt_interfaces_s.ep.rosidl_typesupport_c.c.o
+[2.690s] [100%] Linking C shared library rosidl_generator_py/mini_pjt_interfaces/mini_pjt_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[2.690s] [100%] Linking C shared library rosidl_generator_py/mini_pjt_interfaces/mini_pjt_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[2.690s] [100%] Linking C shared library rosidl_generator_py/mini_pjt_interfaces/mini_pjt_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[2.722s] [100%] Built target mini_pjt_interfaces__rosidl_typesupport_c__pyext
+[2.722s] [100%] Built target mini_pjt_interfaces__rosidl_typesupport_fastrtps_c__pyext
+[2.724s] [100%] Built target mini_pjt_interfaces__rosidl_typesupport_introspection_c__pyext
+[2.733s] Invoked command in '/home/rokey/mini_pjt_ws/build/mini_pjt_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/rokey/mini_pjt_ws/build/mini_pjt_interfaces -- -j22 -l22
+[2.741s] Invoking command in '/home/rokey/mini_pjt_ws/build/mini_pjt_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/rokey/mini_pjt_ws/build/mini_pjt_interfaces
+[2.745s] -- Install configuration: ""
+[2.745s] -- Execute custom install script
+[2.746s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/share/ament_index/resource_index/rosidl_interfaces/mini_pjt_interfaces
+[2.753s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/include/mini_pjt_interfaces/mini_pjt_interfaces/msg/detail/detection__functions.h
+[2.759s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/include/mini_pjt_interfaces/mini_pjt_interfaces/msg/detail/detection__struct.h
+[2.766s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/include/mini_pjt_interfaces/mini_pjt_interfaces/msg/detail/detection__type_support.h
+[2.772s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/include/mini_pjt_interfaces/mini_pjt_interfaces/msg/detail/detection_array__functions.h
+[2.778s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/include/mini_pjt_interfaces/mini_pjt_interfaces/msg/detail/detection_array__struct.h
+[2.785s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/include/mini_pjt_interfaces/mini_pjt_interfaces/msg/detail/detection_array__type_support.h
+[2.791s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/include/mini_pjt_interfaces/mini_pjt_interfaces/msg/detail/robot_state__functions.h
+[2.795s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/include/mini_pjt_interfaces/mini_pjt_interfaces/msg/detail/robot_state__struct.h
+[2.801s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/include/mini_pjt_interfaces/mini_pjt_interfaces/msg/detail/robot_state__type_support.h
+[2.806s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/include/mini_pjt_interfaces/mini_pjt_interfaces/msg/detection.h
+[2.811s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/include/mini_pjt_interfaces/mini_pjt_interfaces/msg/detection_array.h
+[2.816s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/include/mini_pjt_interfaces/mini_pjt_interfaces/msg/robot_state.h
+[2.821s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/include/mini_pjt_interfaces/mini_pjt_interfaces/msg/rosidl_generator_c__visibility_control.h
+[2.826s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/share/mini_pjt_interfaces/environment/library_path.sh
+[2.832s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/share/mini_pjt_interfaces/environment/library_path.dsv
+[2.836s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/include/mini_pjt_interfaces/mini_pjt_interfaces/msg/detail/detection__rosidl_typesupport_fastrtps_c.h
+[2.841s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/include/mini_pjt_interfaces/mini_pjt_interfaces/msg/detail/detection_array__rosidl_typesupport_fastrtps_c.h
+[2.846s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/include/mini_pjt_interfaces/mini_pjt_interfaces/msg/detail/robot_state__rosidl_typesupport_fastrtps_c.h
+[2.852s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/include/mini_pjt_interfaces/mini_pjt_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[2.857s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/include/mini_pjt_interfaces/mini_pjt_interfaces/msg/detail/detection__rosidl_typesupport_introspection_c.h
+[2.862s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/include/mini_pjt_interfaces/mini_pjt_interfaces/msg/detail/detection_array__rosidl_typesupport_introspection_c.h
+[2.867s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/include/mini_pjt_interfaces/mini_pjt_interfaces/msg/detail/robot_state__rosidl_typesupport_introspection_c.h
+[2.872s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/include/mini_pjt_interfaces/mini_pjt_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[2.877s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/include/mini_pjt_interfaces/mini_pjt_interfaces/msg/detail/detection__builder.hpp
+[2.882s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/include/mini_pjt_interfaces/mini_pjt_interfaces/msg/detail/detection__struct.hpp
+[2.887s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/include/mini_pjt_interfaces/mini_pjt_interfaces/msg/detail/detection__traits.hpp
+[2.893s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/include/mini_pjt_interfaces/mini_pjt_interfaces/msg/detail/detection__type_support.hpp
+[2.897s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/include/mini_pjt_interfaces/mini_pjt_interfaces/msg/detail/detection_array__builder.hpp
+[2.902s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/include/mini_pjt_interfaces/mini_pjt_interfaces/msg/detail/detection_array__struct.hpp
+[2.907s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/include/mini_pjt_interfaces/mini_pjt_interfaces/msg/detail/detection_array__traits.hpp
+[2.912s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/include/mini_pjt_interfaces/mini_pjt_interfaces/msg/detail/detection_array__type_support.hpp
+[2.917s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/include/mini_pjt_interfaces/mini_pjt_interfaces/msg/detail/robot_state__builder.hpp
+[2.922s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/include/mini_pjt_interfaces/mini_pjt_interfaces/msg/detail/robot_state__struct.hpp
+[2.927s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/include/mini_pjt_interfaces/mini_pjt_interfaces/msg/detail/robot_state__traits.hpp
+[2.933s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/include/mini_pjt_interfaces/mini_pjt_interfaces/msg/detail/robot_state__type_support.hpp
+[2.938s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/include/mini_pjt_interfaces/mini_pjt_interfaces/msg/detection.hpp
+[2.944s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/include/mini_pjt_interfaces/mini_pjt_interfaces/msg/detection_array.hpp
+[2.948s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/include/mini_pjt_interfaces/mini_pjt_interfaces/msg/robot_state.hpp
+[2.955s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/include/mini_pjt_interfaces/mini_pjt_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
+[2.959s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/include/mini_pjt_interfaces/mini_pjt_interfaces/msg/detail/detection__rosidl_typesupport_fastrtps_cpp.hpp
+[2.964s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/include/mini_pjt_interfaces/mini_pjt_interfaces/msg/detail/detection_array__rosidl_typesupport_fastrtps_cpp.hpp
+[2.968s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/include/mini_pjt_interfaces/mini_pjt_interfaces/msg/detail/robot_state__rosidl_typesupport_fastrtps_cpp.hpp
+[2.974s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/include/mini_pjt_interfaces/mini_pjt_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[2.978s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/include/mini_pjt_interfaces/mini_pjt_interfaces/msg/detail/detection__rosidl_typesupport_introspection_cpp.hpp
+[2.984s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/include/mini_pjt_interfaces/mini_pjt_interfaces/msg/detail/detection_array__rosidl_typesupport_introspection_cpp.hpp
+[2.988s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/include/mini_pjt_interfaces/mini_pjt_interfaces/msg/detail/robot_state__rosidl_typesupport_introspection_cpp.hpp
+[2.995s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/share/mini_pjt_interfaces/environment/pythonpath.sh
+[3.000s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/share/mini_pjt_interfaces/environment/pythonpath.dsv
+[3.006s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/local/lib/python3.10/dist-packages/mini_pjt_interfaces-0.0.1-py3.10.egg-info/PKG-INFO
+[3.014s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/local/lib/python3.10/dist-packages/mini_pjt_interfaces-0.0.1-py3.10.egg-info/SOURCES.txt
+[3.021s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/local/lib/python3.10/dist-packages/mini_pjt_interfaces-0.0.1-py3.10.egg-info/dependency_links.txt
+[3.026s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/local/lib/python3.10/dist-packages/mini_pjt_interfaces-0.0.1-py3.10.egg-info/top_level.txt
+[3.032s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/local/lib/python3.10/dist-packages/mini_pjt_interfaces/__init__.py
+[3.038s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/local/lib/python3.10/dist-packages/mini_pjt_interfaces/_mini_pjt_interfaces_s.ep.rosidl_typesupport_c.c
+[3.042s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/local/lib/python3.10/dist-packages/mini_pjt_interfaces/_mini_pjt_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+[3.047s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/local/lib/python3.10/dist-packages/mini_pjt_interfaces/_mini_pjt_interfaces_s.ep.rosidl_typesupport_introspection_c.c
+[3.051s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/local/lib/python3.10/dist-packages/mini_pjt_interfaces/libmini_pjt_interfaces__rosidl_generator_py.so
+[3.056s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/local/lib/python3.10/dist-packages/mini_pjt_interfaces/mini_pjt_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[3.061s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/local/lib/python3.10/dist-packages/mini_pjt_interfaces/mini_pjt_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[3.067s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/local/lib/python3.10/dist-packages/mini_pjt_interfaces/mini_pjt_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[3.071s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/local/lib/python3.10/dist-packages/mini_pjt_interfaces/msg/__init__.py
+[3.077s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/local/lib/python3.10/dist-packages/mini_pjt_interfaces/msg/_detection.py
+[3.083s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/local/lib/python3.10/dist-packages/mini_pjt_interfaces/msg/_detection_array.py
+[3.088s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/local/lib/python3.10/dist-packages/mini_pjt_interfaces/msg/_detection_array_s.c
+[3.094s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/local/lib/python3.10/dist-packages/mini_pjt_interfaces/msg/_detection_s.c
+[3.100s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/local/lib/python3.10/dist-packages/mini_pjt_interfaces/msg/_robot_state.py
+[3.105s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/local/lib/python3.10/dist-packages/mini_pjt_interfaces/msg/_robot_state_s.c
+[3.110s] -- Up-to-date symlink: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/local/lib/python3.10/dist-packages/mini_pjt_interfaces/mini_pjt_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[3.110s] -- Up-to-date symlink: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/local/lib/python3.10/dist-packages/mini_pjt_interfaces/mini_pjt_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[3.110s] -- Up-to-date symlink: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/local/lib/python3.10/dist-packages/mini_pjt_interfaces/mini_pjt_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[3.110s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/share/ament_index/resource_index/rust_packages/mini_pjt_interfaces
+[3.116s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/share/mini_pjt_interfaces/rust/Cargo.toml
+[3.121s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/share/mini_pjt_interfaces/rust/build.rs
+[3.126s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/share/mini_pjt_interfaces/rust/src/lib.rs
+[3.130s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/share/mini_pjt_interfaces/rust/src/msg.rs
+[3.137s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/share/mini_pjt_interfaces/rust/src/msg/rmw.rs
+[3.142s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/share/mini_pjt_interfaces/msg/Detection.idl
+[3.147s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/share/mini_pjt_interfaces/msg/DetectionArray.idl
+[3.152s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/share/mini_pjt_interfaces/msg/RobotState.idl
+[3.158s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/share/mini_pjt_interfaces/msg/Detection.msg
+[3.163s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/share/mini_pjt_interfaces/msg/DetectionArray.msg
+[3.167s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/share/mini_pjt_interfaces/msg/RobotState.msg
+[3.172s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/share/ament_index/resource_index/package_run_dependencies/mini_pjt_interfaces
+[3.177s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/share/ament_index/resource_index/parent_prefix_path/mini_pjt_interfaces
+[3.183s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/share/mini_pjt_interfaces/environment/ament_prefix_path.sh
+[3.187s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/share/mini_pjt_interfaces/environment/ament_prefix_path.dsv
+[3.191s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/share/mini_pjt_interfaces/environment/path.sh
+[3.197s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/share/mini_pjt_interfaces/environment/path.dsv
+[3.203s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/share/mini_pjt_interfaces/local_setup.bash
+[3.207s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/share/mini_pjt_interfaces/local_setup.sh
+[3.212s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/share/mini_pjt_interfaces/local_setup.zsh
+[3.218s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/share/mini_pjt_interfaces/local_setup.dsv
+[3.223s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/share/mini_pjt_interfaces/package.dsv
+[3.228s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/share/ament_index/resource_index/packages/mini_pjt_interfaces
+[3.233s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/share/mini_pjt_interfaces/cmake/rosidl_cmake-extras.cmake
+[3.237s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/share/mini_pjt_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+[3.242s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/share/mini_pjt_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+[3.247s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/share/mini_pjt_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+[3.252s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/share/mini_pjt_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+[3.256s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/share/mini_pjt_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[3.262s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/share/mini_pjt_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[3.267s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/share/mini_pjt_interfaces/cmake/rosidl_cmake_aggregate_target-extras.cmake
+[3.272s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/share/mini_pjt_interfaces/cmake/mini_pjt_interfacesConfig.cmake
+[3.276s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/share/mini_pjt_interfaces/cmake/mini_pjt_interfacesConfig-version.cmake
+[3.282s] -- Symlinking: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/share/mini_pjt_interfaces/package.xml
+[3.287s] -- Installing: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/lib/libmini_pjt_interfaces__rosidl_generator_c.so
+[3.287s] -- Set runtime path of "/home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/lib/libmini_pjt_interfaces__rosidl_generator_c.so" to ""
+[3.287s] -- Installing: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/lib/libmini_pjt_interfaces__rosidl_typesupport_fastrtps_c.so
+[3.287s] -- Set runtime path of "/home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/lib/libmini_pjt_interfaces__rosidl_typesupport_fastrtps_c.so" to ""
+[3.287s] -- Installing: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/lib/libmini_pjt_interfaces__rosidl_typesupport_introspection_c.so
+[3.287s] -- Set runtime path of "/home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/lib/libmini_pjt_interfaces__rosidl_typesupport_introspection_c.so" to ""
+[3.288s] -- Installing: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/lib/libmini_pjt_interfaces__rosidl_typesupport_c.so
+[3.288s] -- Set runtime path of "/home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/lib/libmini_pjt_interfaces__rosidl_typesupport_c.so" to ""
+[3.288s] -- Installing: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/lib/libmini_pjt_interfaces__rosidl_typesupport_fastrtps_cpp.so
+[3.288s] -- Set runtime path of "/home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/lib/libmini_pjt_interfaces__rosidl_typesupport_fastrtps_cpp.so" to ""
+[3.288s] -- Installing: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/lib/libmini_pjt_interfaces__rosidl_typesupport_introspection_cpp.so
+[3.288s] -- Set runtime path of "/home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/lib/libmini_pjt_interfaces__rosidl_typesupport_introspection_cpp.so" to ""
+[3.288s] -- Installing: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/lib/libmini_pjt_interfaces__rosidl_typesupport_cpp.so
+[3.288s] -- Set runtime path of "/home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/lib/libmini_pjt_interfaces__rosidl_typesupport_cpp.so" to ""
+[3.309s] Listing '/home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/local/lib/python3.10/dist-packages/mini_pjt_interfaces'...
+[3.309s] Compiling '/home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/local/lib/python3.10/dist-packages/mini_pjt_interfaces/__init__.py'...
+[3.309s] Listing '/home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/local/lib/python3.10/dist-packages/mini_pjt_interfaces/msg'...
+[3.309s] Compiling '/home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/local/lib/python3.10/dist-packages/mini_pjt_interfaces/msg/__init__.py'...
+[3.309s] Compiling '/home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/local/lib/python3.10/dist-packages/mini_pjt_interfaces/msg/_detection.py'...
+[3.309s] Compiling '/home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/local/lib/python3.10/dist-packages/mini_pjt_interfaces/msg/_detection_array.py'...
+[3.309s] Compiling '/home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/local/lib/python3.10/dist-packages/mini_pjt_interfaces/msg/_robot_state.py'...
+[3.311s] -- Installing: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/lib/libmini_pjt_interfaces__rosidl_generator_py.so
+[3.311s] -- Set runtime path of "/home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/lib/libmini_pjt_interfaces__rosidl_generator_py.so" to ""
+[3.311s] -- Installing: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/share/mini_pjt_interfaces/cmake/export_mini_pjt_interfaces__rosidl_generator_cExport.cmake
+[3.312s] -- Installing: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/share/mini_pjt_interfaces/cmake/export_mini_pjt_interfaces__rosidl_generator_cExport-noconfig.cmake
+[3.312s] -- Installing: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/share/mini_pjt_interfaces/cmake/export_mini_pjt_interfaces__rosidl_typesupport_fastrtps_cExport.cmake
+[3.312s] -- Installing: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/share/mini_pjt_interfaces/cmake/export_mini_pjt_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[3.312s] -- Installing: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/share/mini_pjt_interfaces/cmake/mini_pjt_interfaces__rosidl_typesupport_introspection_cExport.cmake
+[3.312s] -- Installing: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/share/mini_pjt_interfaces/cmake/mini_pjt_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[3.312s] -- Installing: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/share/mini_pjt_interfaces/cmake/mini_pjt_interfaces__rosidl_typesupport_cExport.cmake
+[3.312s] -- Installing: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/share/mini_pjt_interfaces/cmake/mini_pjt_interfaces__rosidl_typesupport_cExport-noconfig.cmake
+[3.312s] -- Installing: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/share/mini_pjt_interfaces/cmake/export_mini_pjt_interfaces__rosidl_generator_cppExport.cmake
+[3.312s] -- Installing: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/share/mini_pjt_interfaces/cmake/export_mini_pjt_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake
+[3.312s] -- Installing: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/share/mini_pjt_interfaces/cmake/export_mini_pjt_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[3.312s] -- Installing: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/share/mini_pjt_interfaces/cmake/mini_pjt_interfaces__rosidl_typesupport_introspection_cppExport.cmake
+[3.312s] -- Installing: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/share/mini_pjt_interfaces/cmake/mini_pjt_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[3.312s] -- Installing: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/share/mini_pjt_interfaces/cmake/mini_pjt_interfaces__rosidl_typesupport_cppExport.cmake
+[3.312s] -- Installing: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/share/mini_pjt_interfaces/cmake/mini_pjt_interfaces__rosidl_typesupport_cppExport-noconfig.cmake
+[3.312s] -- Installing: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/share/mini_pjt_interfaces/cmake/export_mini_pjt_interfaces__rosidl_generator_pyExport.cmake
+[3.312s] -- Installing: /home/rokey/mini_pjt_ws/install/mini_pjt_interfaces/share/mini_pjt_interfaces/cmake/export_mini_pjt_interfaces__rosidl_generator_pyExport-noconfig.cmake
+[3.314s] Invoked command in '/home/rokey/mini_pjt_ws/build/mini_pjt_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/rokey/mini_pjt_ws/build/mini_pjt_interfaces

@@ -1,0 +1,31 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from mini_pjt_interfaces/msg/Detection.msg
+// generated code does not contain a copyright notice
+
+
+module mini_pjt_interfaces {
+  module msg {
+    typedef int32 int32__4[4];
+    @verbatim (language="comment", text=
+      "단일 객체 검출 결과 (웹캠 / 온보드 공용)")
+    struct Detection {
+      @verbatim (language="comment", text=
+        "클래스 이름 (예: \"car\", \"dummy\")")
+      string class_name;
+
+      @verbatim (language="comment", text=
+        "검출 신뢰도 0.0 ~ 1.0")
+      float confidence;
+
+      @verbatim (language="comment", text=
+        "bbox 중심 픽셀 좌표")
+      int32 center_x;
+
+      int32 center_y;
+
+      @verbatim (language="comment", text=
+        "bbox 픽셀 좌표 [x1, y1, x2, y2]")
+      int32__4 bbox;
+    };
+  };
+};

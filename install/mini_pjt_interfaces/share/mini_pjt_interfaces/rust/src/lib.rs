@@ -1,0 +1,1 @@
+/home/rokey/mini_pjt_ws/build/mini_pjt_interfaces/rosidl_generator_rs/mini_pjt_interfaces/rust/src/lib.rs

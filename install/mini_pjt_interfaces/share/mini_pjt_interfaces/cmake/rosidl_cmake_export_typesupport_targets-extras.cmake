@@ -1,0 +1,1 @@
+/home/rokey/mini_pjt_ws/build/mini_pjt_interfaces/rosidl_cmake/rosidl_cmake_export_typesupport_targets-extras.cmake

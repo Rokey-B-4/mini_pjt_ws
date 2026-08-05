@@ -1,0 +1,1 @@
+/home/rokey/mini_pjt_ws/build/mini_pjt_interfaces/ament_cmake_export_targets/ament_cmake_export_targets-extras.cmake

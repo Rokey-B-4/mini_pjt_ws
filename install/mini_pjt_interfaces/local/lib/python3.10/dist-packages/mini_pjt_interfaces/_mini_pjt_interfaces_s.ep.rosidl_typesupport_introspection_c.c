@@ -1,0 +1,1 @@
+/home/rokey/mini_pjt_ws/build/mini_pjt_interfaces/rosidl_generator_py/mini_pjt_interfaces/_mini_pjt_interfaces_s.ep.rosidl_typesupport_introspection_c.c

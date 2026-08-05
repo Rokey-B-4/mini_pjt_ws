@@ -1,0 +1,1 @@
+/home/rokey/mini_pjt_ws/build/mini_pjt_interfaces/rosidl_generator_c/mini_pjt_interfaces/msg/rosidl_generator_c__visibility_control.h

@@ -1,0 +1,5 @@
+[console_scripts]
+oakd_probe = mini_pjt_vision.oakd_probe:main
+robot_detector_node = mini_pjt_vision.robot_detector_node:main
+webcam_detector_node = mini_pjt_vision.webcam_detector_node:main
+
